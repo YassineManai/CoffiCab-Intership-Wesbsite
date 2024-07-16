@@ -1,0 +1,45 @@
+export class Process {
+    idPorcess?: number = 0;
+    codeProcess?: string = "string";
+    descProcess?: string = "string";
+    rework?: boolean = false;
+    withSetupMandatory?: boolean = false;
+    withToolingVerification?: boolean = false;
+    withIncomplete?: boolean = false;
+    withQuality?: boolean = false;
+    withValidationManualReport?: boolean = false;
+    withQualityReturnValidation?: boolean = false;
+    returnValidationProfil?: string = "string";
+    warehouseWithSupplierCode?: boolean = false;
+    inputForCmes?: boolean = false;
+    warehouseCMES?: boolean = false;
+    quality_100_100?: boolean = false;
+    warehouseIncomplet?: boolean = false;
+    with_Metalic_Number_In_Prod?: boolean = false;
+    cnx_Par_Zone?: boolean = false;
+    with_Demarrage?: boolean = false;
+    nB_Wire_Fois_Recette?: boolean = false;
+    img_Process?: string = "string";
+    codeProcessToRework?: string = "string";
+    stock_In_LPDM?: boolean = false;
+    stockName?: string = "string";
+    dechet_Activate?: boolean = false;
+    plC_Assigned?: string = "string";
+    warehouse_Metal?: boolean = false;
+    many_Output_For_One_Input?: boolean = false;
+    model_Label?: number = 0;
+    input_Manual_MetaliqueNumber?: boolean = false;
+    withoutFifo?: boolean = false;
+    long_Machine_Stop_min?: number = 0;
+    ftQwithFirstValidationQuality?: boolean = false;
+    hV_TEST?: boolean = false;
+    withValidationRequestInsolation?: boolean = false;
+    withValidationRequestColorant?: boolean = false;
+    withScrapDeclaration?: boolean = false;
+    qaStopLabelRed?: boolean = false;
+    hide_HU_from_NOK_Quality_label?: boolean = false;
+    ftQ_update_in_the_Same_Shift?: boolean = false;
+    accept_OK_NOT_INC_Spools_As_input_Rewinders?: boolean = false;
+    eventDetectionIncludeSpooler?: boolean = false;
+  }
+  

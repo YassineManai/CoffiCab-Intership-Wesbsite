@@ -1,0 +1,17 @@
+<div *ngIf="process != null">
+    <h2>{{ process.idPorcess }}</h2>
+  
+    <div>
+      codeProcess:
+      <input [(ngModel)]="process.codeProcess" placeholder="codeProcess" />
+    </div>
+    <div>
+      descProcess:
+      <input [(ngModel)]="process.descProcess" placeholder="descProcess" />
+    </div>
+    <button (click)="updateProcess(process)" *ngIf="process?.idPorcess">Save</button>
+    <button (click)="deleteProcess(process.idPorcess!)" *ngIf="process?.idPorcess">Delete</button>
+    <button (click)="createProcess(process)" *ngIf="!process?.idPorcess">Create</button>
+    
+</div>
+  
