@@ -68,7 +68,7 @@ body {
 	display: none;
 }
 #sidebar.hide {
-	width: 60px;
+	width: 55px;
 }
 #sidebar .brand {
 	font-size: 24px;
@@ -142,9 +142,11 @@ body {
 #sidebar .side-menu.top li.active a {
 	color: var(--blue);
 }
-#sidebar.hide .side-menu li a {
+#sidebar.hide .side-menu li a  ~ #content {
 	width: calc(48px - (4px * 2));
 	transition: width .3s ease;
+	width: calc(100% - 60px);
+	left: 60px;
 }
 #sidebar .side-menu li a.logout {
 	color: var(--red);
@@ -161,9 +163,8 @@ body {
 
 
 
-
-
 /* CONTENT */
+
 #content {
 	position: relative;
 	width: calc(100% - 280px);
@@ -172,7 +173,7 @@ body {
 }
 #sidebar.hide ~ #content {
 	width: calc(100% - 60px);
-	left: 60px;
+	left: 55px;
 }
 
 

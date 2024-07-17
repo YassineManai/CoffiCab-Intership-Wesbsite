@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   constructor() { }
+  
 
   ngOnInit(): void {
     const menuBar = document.querySelector('#content nav .bx.bx-menu');
@@ -66,5 +67,8 @@ export class NavbarComponent implements OnInit {
         }
       });
     }
+
+
+    
   }
 }
