@@ -1,0 +1,18 @@
+
+#sidebar.hide {
+    display: none;
+  }
+  
+  @media (max-width: 576px) {
+    #sidebar {
+      display: none;
+    }
+  
+    #sidebar.hide {
+      display: block;
+    }
+  
+    nav form.show {
+      display: block;
+    }
+  }
