@@ -1,0 +1,257 @@
+<div *ngIf="process != null">
+    <h2>{{ process.idPorcess }}</h2>
+  <table>
+    <tr>
+      <td>
+    <div>
+     <label for="codeProcess">codeProcess  </label> 
+      <input [(ngModel)]="process.codeProcess"  />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="descProcess">description  </label> 
+      <input [(ngModel)]="process.descProcess" placeholder="descProcess" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="CodeProcessToRework">CodeProcessToRework  </label>
+      <input [(ngModel)]="process.codeProcessToRework" placeholder="CodeProcessToRework" />
+    </div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+    <div>
+     <label for="returnValidationProfil">returnValidationProfil  </label> 
+      <input [(ngModel)]="process.returnValidationProfil" placeholder="ReturnValidationProfil" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="StockName">StockName  </label>
+      <input [(ngModel)]="process.stockName" placeholder="StockName" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="PLC_Assigned">PLC_Assigned  </label>
+      <input [(ngModel)]="process.plC_Assigned" placeholder="PLC_Assigned" />
+    </div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+    <div>
+      <label for="Img_Process">Img_Process  </label>
+      <input [(ngModel)]="process.img_Process" placeholder="Img_Process" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="Long_Machine_Stop_min">Long_Machine_Stop_min  </label>
+      <input [(ngModel)]="process.long_Machine_Stop_min" placeholder="Long_Machine_Stop_min" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="Model_Label">Model_Label  </label>
+      <input [(ngModel)]="process.model_Label" placeholder="Model_Label" />
+    </div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="Rework">Rework  </label>
+      <input type="checkbox" name="rework_true" [checked]='process.rework===true'  [(ngModel)]="process.rework" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="withToolingVerification">withToolingVerification  </label>
+      <input type="checkbox" name="withToolingVerification_true" [checked]='process.withToolingVerification===true'  [(ngModel)]="process.withToolingVerification" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="withSetupMandatory">withSetupMandatory  </label>
+      <input type="checkbox" name="withSetupMandatory_true" [checked]='process.withSetupMandatory===true'  [(ngModel)]="process.withSetupMandatory" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="withIncomplete">withIncomplete  </label>
+      <input type="checkbox" name="withIncomplete" [checked]='process.withIncomplete===true'  [(ngModel)]="process.withIncomplete" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="withQuality">withQuality  </label>
+      <input type="checkbox" name="withQuality" [checked]='process.withQuality===true'  [(ngModel)]="process.withQuality" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="withValidationManualReport">withValidationManualReport  </label>
+      <input type="checkbox" name="withValidationManualReport" [checked]='process.withValidationManualReport===true'  [(ngModel)]="process.withValidationManualReport" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="withQualityReturnValidation">withQualityReturnValidation  </label>
+      <input type="checkbox" name="withQualityReturnValidation" [checked]='process.withQualityReturnValidation===true'  [(ngModel)]="process.withQualityReturnValidation" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="warehouseWithSupplierCode">warehouseWithSupplierCode  </label>
+      <input type="checkbox" name="warehouseWithSupplierCode" [checked]='process.warehouseWithSupplierCode===true'  [(ngModel)]="process.warehouseWithSupplierCode" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="inputForCmes">inputForCmes  </label>
+      <input type="checkbox" name="inputForCmes" [checked]='process.inputForCmes===true'  [(ngModel)]="process.inputForCmes" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="warehouseCMES">warehouseCMES  </label>
+      <input type="checkbox" name="warehouseCMES" [checked]='process.warehouseCMES===true'  [(ngModel)]="process.warehouseCMES" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="quality_100_100">quality_100_100  </label>
+      <input type="checkbox" name="quality_100_100" [checked]='process.quality_100_100===true'  [(ngModel)]="process.quality_100_100" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="warehouseIncomplet">warehouseIncomplet  </label>
+      <input type="checkbox" name="warehouseIncomplet" [checked]='process.warehouseIncomplet===true'  [(ngModel)]="process.warehouseIncomplet" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    
+    
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="cnx_Par_Zone">cnx_Par_Zone  </label>
+      <input type="checkbox" name="cnx_Par_Zone" [checked]='process.cnx_Par_Zone===true'  [(ngModel)]="process.cnx_Par_Zone" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="with_Demarrage">with_Demarrage  </label>
+      <input type="checkbox" name="with_Demarrage" [checked]='process.with_Demarrage===true'  [(ngModel)]="process.with_Demarrage" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="nB_Wire_Fois_Recette">nB_Wire_Fois_Recette  </label>
+      <input type="checkbox" name="nB_Wire_Fois_Recette" [checked]='process.nB_Wire_Fois_Recette===true'  [(ngModel)]="process.nB_Wire_Fois_Recette" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="stock_In_LPDM">stock_In_LPDM  </label>
+      <input type="checkbox" name="stock_In_LPDM" [checked]='process.stock_In_LPDM===true'  [(ngModel)]="process.stock_In_LPDM" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="dechet_Activate">dechet_Activate  </label>
+      <input type="checkbox" name="dechet_Activate" [checked]='process.dechet_Activate===true'  [(ngModel)]="process.dechet_Activate" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="withoutFifo">withoutFifo  </label>
+      <input type="checkbox" name="withoutFifo" [checked]='process.withoutFifo===true'  [(ngModel)]="process.withoutFifo" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="ftQwithFirstValidationQuality">ftQwithFirstValidationQuality  </label>
+      <input type="checkbox" name="ftQwithFirstValidationQuality" [checked]='process.ftQwithFirstValidationQuality===true'  [(ngModel)]="process.ftQwithFirstValidationQuality" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="hV_TEST">hV_TEST  </label>
+      <input type="checkbox" name="hV_TEST" [checked]='process.hV_TEST===true'  [(ngModel)]="process.hV_TEST" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="withValidationRequestInsolation">withValidationRequestInsolation  </label>
+      <input type="checkbox" name="withValidationRequestInsolation" [checked]='process.withValidationRequestInsolation===true'  [(ngModel)]="process.withValidationRequestInsolation" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="withValidationRequestColorant">withValidationRequestColorant  </label>
+      <input type="checkbox" name="withValidationRequestColorant" [checked]='process.withValidationRequestColorant===true'  [(ngModel)]="process.withValidationRequestColorant" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="withScrapDeclaration">withScrapDeclaration  </label>
+      <input type="checkbox" name="withScrapDeclaration" [checked]='process.withScrapDeclaration===true'  [(ngModel)]="process.withScrapDeclaration" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="qaStopLabelRed">qaStopLabelRed  </label>
+      <input type="checkbox" name="qaStopLabelRed" [checked]='process.qaStopLabelRed===true'  [(ngModel)]="process.qaStopLabelRed" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="accept_OK_NOT_INC_Spools_As_input_Rewinders">accept_OK_NOT_INC_Spools_As_input_Rewinders  </label>
+      <input type="checkbox" name="accept_OK_NOT_INC_Spools_As_input_Rewinders" [checked]='process.accept_OK_NOT_INC_Spools_As_input_Rewinders===true'  [(ngModel)]="process.accept_OK_NOT_INC_Spools_As_input_Rewinders" >
+    </div>
+    </td>
+    <td></td>
+    <td>
+      <div>
+      <label for="eventDetectionIncludeSpooler">eventDetectionIncludeSpooler  </label>
+      <input type="checkbox" name="eventDetectionIncludeSpooler" [checked]='process.eventDetectionIncludeSpooler===true'  [(ngModel)]="process.withScrapDeclaration" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="with_Metalic_Number_In_Prod">with_Metalic_Number_In_Prod  </label>
+      <input type="checkbox" name="with_Metalic_Number_In_Prod" [checked]='process.with_Metalic_Number_In_Prod===true'  [(ngModel)]="process.with_Metalic_Number_In_Prod" >
+    </div>
+    </td>
+  </tr>
+  
+
+  </table>
+    <button (click)="updateProcess(process)" *ngIf="process?.idPorcess">Save</button>
+    <button (click)="deleteProcess(process.idPorcess!)" *ngIf="process?.idPorcess">Delete</button>
+    <button (click)="createProcess(process)" *ngIf="!process?.idPorcess">Create</button>
+    
+</div>
+  
