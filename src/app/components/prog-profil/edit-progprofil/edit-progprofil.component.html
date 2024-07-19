@@ -1,1 +1,43 @@
-<p>edit-progprofil works!</p>
+<div *ngIf="progprofil != null">
+    <h2>{{ progprofil.idProgProfil }}</h2>
+  <table>
+    <tr>
+      <td>
+    <div>
+     <label for="Id Profil">Id Profil  </label> 
+      <input [(ngModel)]="progprofil.id_Profil"  />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="libProgramme">libProgramme  </label> 
+      <input [(ngModel)]="progprofil.libProgramme" placeholder="libProgramme" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="nomProgramme">nomProgramme  </label>
+      <input [(ngModel)]="progprofil.nomProgramme" placeholder="nomProgramme" />
+    </div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+        <div>
+          <label for="Intitule">Intitule  </label>
+          <input [(ngModel)]="progprofil.Intitule" placeholder="Intitule" />
+        </div>
+      </td>
+      <td>
+        <div>
+        <label for="onlyconsultation">Onlyconsultation  </label>
+        <input type="checkbox" name="onlyconsultation" [checked]='progprofil.onlyconsultation===true'  [(ngModel)]="progprofil.onlyconsultation" >
+      </div>
+      </td>
+  </tr>
+</table>
+    <button (click)="updateProgProfil(progprofil)" *ngIf="progprofil?.idProgProfil">Save</button>
+    <button (click)="deleteProgProfil(progprofil.idProgProfil!)" *ngIf="progprofil?.idProgProfil">Delete</button>
+    <button (click)="createProgProfil(progprofil)" *ngIf="!progprofil?.idProgProfil">Create</button>
+    
+</div>

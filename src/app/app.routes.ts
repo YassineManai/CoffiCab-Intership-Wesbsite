@@ -5,12 +5,13 @@ import { ProfilUsersComponent } from './components/profil-users/profil-users.com
 import { ProgProfilesComponent } from './components/prog-profiles/prog-profiles.component';
 import { ProductComponent } from './components/product/product.component';
 import { CaracterStartofshiftvaluesComponent } from './components/caracter-startofshiftvalues/caracter-startofshiftvalues.component';
+import { ProgProfilComponent } from './components/prog-profil/prog-profil.component';
 
 export const routes: Routes = [
     {path: 'Machine',component: MachineComponent },
     {path: 'Process',component: ProcessComponent},
     {path: 'ProfilUsers',component: ProfilUsersComponent},
-    {path: 'ProgProfiles',component: ProgProfilesComponent},
+    {path: 'ProgProfil',component: ProgProfilComponent},
     {path: 'Product',component: ProductComponent},
     {path: 'CaractersStartofShiftValues',component: CaracterStartofshiftvaluesComponent},
 

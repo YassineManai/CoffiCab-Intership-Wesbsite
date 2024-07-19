@@ -11,7 +11,7 @@ import { ProgprofilService } from '../../../services/progprofil.service';
   styleUrl: './edit-progprofil.component.css'
 })
 export class EditProgprofilComponent implements OnInit{
-@Input() pr: ProgProfil | null= null;
+@Input() progprofil: ProgProfil | null= null;
 @Output() progProfilEdited = new EventEmitter<ProgProfil[]>();
 constructor(private progprofilService: ProgprofilService) {}
 
@@ -21,11 +21,11 @@ constructor(private progprofilService: ProgprofilService) {}
 
   fetchProgProfil(): void {
     this.progprofilService.getProgProfils()
-      .subscribe((pr: ProgProfil[]) => this.progProfilEdited.emit(pr));
+      .subscribe((progprofil: ProgProfil[]) => this.progProfilEdited.emit(progprofil));
   }
 
-  updateProgProfil(pr: ProgProfil): void {
-    this.progprofilService.updateProgProfil(pr)
+  updateProgProfil(progprofil: ProgProfil): void {
+    this.progprofilService.updateProgProfil(progprofil)
       .subscribe(() => this.fetchProgProfil());
   }
 
@@ -34,9 +34,9 @@ constructor(private progprofilService: ProgprofilService) {}
       .subscribe(() => this.fetchProgProfil());
   }
 
-  createProgProfil(pr: ProgProfil): void {
-    console.log(pr)
-    this.progprofilService.createProgProfil(pr)
+  createProgProfil(progprofil: ProgProfil): void {
+    console.log(progprofil)
+    this.progprofilService.createProgProfil(progprofil)
       .subscribe(() => this.fetchProgProfil());
   }
 }

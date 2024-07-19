@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProgProfil } from '../../models/prog-profil';
 import { ProgprofilService } from '../../services/progprofil.service';
+import { EditProgprofilComponent } from "./edit-progprofil/edit-progprofil.component";
 @Component({
   selector: 'app-prog-profil',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, EditProgprofilComponent],
   templateUrl: './prog-profil.component.html',
   styleUrl: './prog-profil.component.css'
 })

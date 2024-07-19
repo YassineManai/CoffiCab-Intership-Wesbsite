@@ -16,32 +16,49 @@
       <span class="text">Download PDF</span>
     </a>
   </div>
-
+  
   
   
 <div>
     
    
-    <h2>Brief description or introduction about the prodcut being managed</h2>
+  <h2>Brief description or introduction about the Product being managed</h2>
+  <button (click)="initNewProduct()">Create new Product</button>
+  
    
 <div class="table-wrapper">
     <table class="fl-table">
         <thead>
         <tr>
-            <th>Process Code</th>
-            <th>Description</th>
-            <th>Rework</th>
-            <th>Quality Check</th>
+          
+          <th>IDProcess</th>
+            <th>TypeProduct</th>
+            <th>ItemCode</th>
+            <th>ItemDesc</th>
+            <th>CodeItemModel</th>
             <th>Warehouse</th>
-            <th>Validation Status</th>
-            <th>Setup Mandatory</th>
-            <th></th>
+            <th>ITemGroup</th>
+            <th>ConsumptionPerOneKM_outPut</th>
         </tr>
         </thead>
         <tbody>
-         
+          <tr *ngFor="let product of products">
+            <td>{{ product.IDProcess }}</td>
+            <td>{{ product.TypeProduct }}</td>
+            <td>{{ product.ItemCode }}</td>
+            <td>{{ product.ItemDesc }}</td>
+            <td>{{ product.CodeItemModel }}</td>
+            <td>{{ product.Warehouse }}</td>
+            <td>{{ product.ITemGroup }}</td> 
+            <td>{{ product.ConsumptionPerOneKM_outPut }}</td>    
+            <td><button (click)="editProduct(product)">Edit</button></td>      
+          </tr>
+        
         </tbody>
     </table>
 </div>
-
+<app-edit-product 
+  [product]="productToEdit" 
+  (productUpdated)="updateProductList($event)">
+</app-edit-product>
     

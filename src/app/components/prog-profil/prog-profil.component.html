@@ -1,1 +1,33 @@
-<p>prog-profil works!</p>
+<h2>Brief description or introduction about the ProgProfil being managed</h2>
+<button (click)="initNewProgProfil()">Create new Process</button>
+ 
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Id Profil</th>
+            <th>libProgramme</th>
+            <th>nomProgramme</th>
+            <th>Intitule</th>
+            <th>onlyconsultation</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let prog of pr">
+              <td>{{ prog.id_Profil }}</td>
+              <td>{{ prog.libProgramme }}</td>
+              <td>{{ prog.nomProgramme }}</td>
+              <td>{{ prog.Intitule }}</td>
+              <td>{{ prog.onlyconsultation }}</td>
+              
+              <td><button (click)="editProgProfil(prog)">Edit</button></td>      
+            </tr>
+          </tbody>
+    </table>
+</div>
+<app-edit-progprofil 
+  [progprofil]="progProfilToEdit" 
+  (progProfilEdited)="updateProgProfilList($event)">
+</app-edit-progprofil>
+
+

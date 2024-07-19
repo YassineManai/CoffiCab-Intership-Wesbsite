@@ -1,0 +1,264 @@
+<div *ngIf="product != null">
+    <h2>{{ product.IDProduct }}</h2>
+  <table>
+    <tr>
+      <td>
+    <div>
+     <label for="IDProcess">IDProcess  </label> 
+      <input [(ngModel)]="product.IDProcess"  />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="TypeProduct">TypeProduct  </label> 
+      <input [(ngModel)]="product.TypeProduct" placeholder="TypeProduct" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="ItemCode">ItemCode  </label>
+      <input [(ngModel)]="product.ItemCode" placeholder="ItemCode" />
+    </div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+    <div>
+     <label for="ItemDesc">ItemDesc  </label> 
+      <input [(ngModel)]="product.ItemDesc" placeholder="ItemDesc" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="ParentItemCode">ParentItemCode  </label>
+      <input [(ngModel)]="product.ParentItemCode" placeholder="ParentItemCode" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="Image">Image  </label>
+      <input [(ngModel)]="product.Image" placeholder="Image" />
+    </div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+    <div>
+      <label for="ParentIDProduct">ParentIDProduct  </label>
+      <input [(ngModel)]="product.ParentIDProduct" placeholder="ParentIDProduct" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="CodeItemModel">CodeItemModel  </label>
+      <input [(ngModel)]="product.CodeItemModel" placeholder="CodeItemModel" />
+    </div>
+  </td>
+  <td>
+    <div>
+      <label for="ITemGroup">ITemGroup  </label>
+      <input [(ngModel)]="product.ITemGroup" placeholder="ITemGroup" />
+    </div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="Warehouse">Warehouse  </label>
+      <input [(ngModel)]="product.Warehouse" placeholder="Warehouse">
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="ConsumptionPerOneKM_outPut">ConsumptionPerOneKM_outPut  </label>
+      <input [(ngModel)]="product.ConsumptionPerOneKM_outPut"  placeholder="ConsumptionPerOneKM_outPut">
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="CodePAC">CodePAC  </label>
+      <input [(ngModel)]="product.CodePAC" placeholder="CodePAC" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="COdeTPV">COdeTPV  </label>
+      <input  [(ngModel)]="product.COdeTPV" placeholder="COdeTPV" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="CodeItemNature">CodeItemNature  </label>
+      <input [(ngModel)]="product.CodeItemNature" placeholder="CodeItemNature">
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="LocalItemCode">LocalItemCode  </label>
+      <input [(ngModel)]="product.LocalItemCode" placeholder="LocalItemCode" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="CodeRecette">CodeRecette  </label>
+      <input [(ngModel)]="product.CodeRecette" placeholder="CodeRecette" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="Speed">Speed  </label>
+      <input  [(ngModel)]="product.Speed"  placeholder="Speed">
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="CunsumptionCopperKgPerOneKM">CunsumptionCopperKgPerOneKM  </label>
+      <input placeholder="CunsumptionCopperKgPerOneKM" [(ngModel)]="product.CunsumptionCopperKgPerOneKM" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="CunsumptionPVCKgPerOneKM">CunsumptionPVCKgPerOneKM  </label>
+<input placeholder="CunsumptionPVCKgPerOneKM" [(ngModel)]="product.CunsumptionPVCKgPerOneKM" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="Famille">Famille  </label>
+<input [(ngModel)]="product.Famille" placeholder="Famille" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="Section">Section  </label>
+      <input  [(ngModel)]="product.Section" placeholder="Section" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="Couleur">Couleur  </label>
+<input [(ngModel)]="product.Couleur" placeholder="Couleur" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="stockcouleurP">stockcouleurP  </label>
+      <input [(ngModel)]="product.stockcouleurP" placeholder="stockcouleurP" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="couleurS">couleurS  </label>
+      <input  [(ngModel)]="product.couleurS" placeholder="couleurS" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="TypeMatiere">TypeMatiere  </label>
+      <input [(ngModel)]="product.TypeMatiere" placeholder="TypeMatiere">
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="Diametre">Diametre  </label>
+      <input [(ngModel)]="product.Diametre" placeholder="Diametre" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="m_min_m_sec">m_min_m_sec  </label>
+      <input [(ngModel)]="product.m_min_m_sec" placeholder="m_min_m_sec" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="CodePAC_DVR">CodePAC_DVR  </label>
+      <input [(ngModel)]="product.CodePAC_DVR" placeholder="CodePAC_DVR" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="CodeItemModel_DVR">CodeItemModel_DVR  </label>
+      <input [(ngModel)]="product.CodeItemModel_DVR" placeholder="CodeItemModel_DVR">
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="Code_Recette_DVR">Code_Recette_DVR  </label>
+      <input  [(ngModel)]="product.Code_Recette_DVR" placeholder="Code_Recette_DVR" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="With_Rewinder">With_Rewinder  </label>
+      <input type="checkbox" name="With_Rewinder" [checked]='product.With_Rewinder===true'  [(ngModel)]="product.With_Rewinder" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="FG">FG  </label>
+      <input type="checkbox" name="FG" [checked]='product.FG===true'  [(ngModel)]="product.FG" >
+    </div>
+    </td>
+    <td>
+      <div>
+      <label for="InforItem">InforItem  </label>
+      <input [(ngModel)]="product.InforItem" placeholder="InforItem" >
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+      <label for="Warehouse_WIP">Warehouse_WIP  </label>
+      <input [(ngModel)]="product.Warehouse_WIP" placeholder="Warehouse_WIP" >
+    </div>
+    </td>
+    <td></td>
+    <td>
+      <div>
+      <label for="ResistanceOptimal">ResistanceOptimal  </label>
+      <input  [(ngModel)]="product.ResistanceOptimal" placeholder="ResistanceOptimal">
+    </div>
+    <tr>
+        
+        <td></td>
+        <td>
+          <div>
+          <label for="Poids_Insolation_Kg_Km">Poids_Insolation_Kg_Km  </label>
+          <input  [(ngModel)]="product.Poids_Insolation_Kg_Km" placeholder="Poids_Insolation_Kg_Km">
+        </div>
+        </td>
+        
+      </tr>
+        </td>
+    <td>
+      <div>
+      <label for="Couleur_Marquage">Couleur_Marquage  </label>
+      <input  [(ngModel)]="product.Couleur_Marquage" placeholder="Couleur_Marquage" >
+    </div>
+    </td>
+  </tr>
+  
+
+  </table>
+    <button (click)="updateProduct(product)" *ngIf="product?.IDProcess">Save</button>
+    <button (click)="deleteProduct(product.IDProduct!)" *ngIf="product?.IDProcess">Delete</button>
+    <button (click)="createProduct(product)" *ngIf="!product?.IDProcess">Create</button>
+    
+</div>
+  
