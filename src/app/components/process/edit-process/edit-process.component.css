@@ -94,7 +94,6 @@
   
   .charsheet header {
     display: flex;
-    align-contents: stretch;
     align-items: stretch;
   }
   
@@ -256,4 +255,7 @@ h2{
 
  
  
- 
+input:required:invalid {
+  border-color: red;
+}
+

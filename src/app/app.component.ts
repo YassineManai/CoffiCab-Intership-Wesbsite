@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 import { ProcessService } from './services/process.service';
 import { Process } from './models/process';
-import { EditProcessComponent } from './components/edit-process/edit-process.component'; // Import the EditProcessComponent
+import { EditProcessComponent } from './components/process/edit-process/edit-process.component'; // Import the EditProcessComponent
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProcessComponent } from './components/process/process.component';

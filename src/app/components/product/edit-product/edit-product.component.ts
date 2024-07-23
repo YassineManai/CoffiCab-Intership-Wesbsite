@@ -13,33 +13,73 @@ import { CommonModule } from '@angular/common';
 })
 export class EditProductComponent implements OnInit {
   @Input() product: Product | null = null;
-  @Output() productUpdated = new EventEmitter<Product[]>();
+  @Output() productUpdated = new EventEmitter<void>();
 
   constructor(private productService: ProductServiceService) {}
 
-  ngOnInit(): void {
-    this.fetchProducts();
-  }
-
-  fetchProducts(): void {
-    this.productService.getProducts()
-      .subscribe((products: Product[]) => this.productUpdated.emit(products));
-  }
+  ngOnInit(): void {  }
 
   updateProduct(product: Product): void {
+    console.log(product)
     this.productService.updateProduct(product)
-      .subscribe(() => this.fetchProducts());
+      .subscribe(() => this.productUpdated.emit());
   }
 
   deleteProduct(id: number): void {
+    console.log(id)
     this.productService.deleteProduct(id)
-      .subscribe(() => this.fetchProducts());
+      .subscribe(() => this.productUpdated.emit());
   }
 
   createProduct(product: Product): void {
-    console.log(product)
-    this.productService.createProduct(product)
-      .subscribe(() => this.fetchProducts());
+  console.log(product)
+    
+      if (this.isValidProduct(product)) {
+        this.productService.createProduct(product)
+        .subscribe(() => this.productUpdated.emit());
+      
+      } else {
+        alert('Please fill in all the required fields.');
+      }
   }
+
+  isValidProduct(product: Product): boolean {
+    const requiredFields = [
+     product.typeProduct,
+     product.itemCode,
+     product.itemDesc,
+     product.parentItemCode,
+     product.ParentIDProduct,
+     product.codeItemModel,
+     product.iTemGroup,
+     product.warehouse,
+     product.consumptionPerOneKM_outPut,
+     product.famille,
+     product.section,
+     product.couleur,
+     product.couleurP,
+     product.couleurS,
+     product.diametre,
+     product.poids_Conducteur_Kg_Km,
+     product.typeMatiere,
+     product.codePAC_DVR,
+     product.codePAC,
+     product.codeRecette,
+     product.codeItemNature,
+     product.localItemCode,
+     product.m_min_m_sec,
+     product.codeItemModel_DVR,
+     product.code_Recette_DVR,
+     product.inforItem,
+     product.warehouse,
+     product.resistanceOptimal,
+     product.poids_Insolation_Kg_Km,
+     product.couleur_Marquage
+    ];
+
+    return requiredFields.every(field => field !== undefined && field !== null && field !== '');
+  }
+
+
 
 }

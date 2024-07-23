@@ -1,29 +1,8 @@
-<div class="head-title">
-    <div class="left">
-      <h1>Process Overview</h1>
-      <ul class="breadcrumb">
-        <li>
-          <a href="#">Dashboard</a>
-        </li>
-        <li><i class='bx bx-chevron-right' ></i></li>
-        <li>
-          <a class="active" href="#">Process Overview</a>
-        </li>
-      </ul>
-    </div>
-    <a href="#" class="btn-download">
-      <i class='bx bxs-cloud-download' ></i>
-      <span class="text">Download PDF</span>
-    </a>
-  </div>
-  
-  
-  
-<div>
+
     
    
   <h2>Brief description or introduction about the Product being managed</h2>
-  <button (click)="initNewProduct()">Create new Product</button>
+  <button (click)="initNewProduct()" class="button" >Create new Product</button>
   
    
 <div class="table-wrapper">
@@ -39,18 +18,19 @@
             <th>Warehouse</th>
             <th>ITemGroup</th>
             <th>ConsumptionPerOneKM_outPut</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
           <tr *ngFor="let product of products">
-            <td>{{ product.IDProcess }}</td>
-            <td>{{ product.TypeProduct }}</td>
-            <td>{{ product.ItemCode }}</td>
-            <td>{{ product.ItemDesc }}</td>
-            <td>{{ product.CodeItemModel }}</td>
-            <td>{{ product.Warehouse }}</td>
-            <td>{{ product.ITemGroup }}</td> 
-            <td>{{ product.ConsumptionPerOneKM_outPut }}</td>    
+            <td>{{ product.idProcess }}</td>
+            <td>{{ product.typeProduct }}</td>
+            <td>{{ product.itemCode }}</td>
+            <td>{{ product.itemDesc }}</td>
+            <td>{{ product.codeItemModel }}</td>
+            <td>{{ product.warehouse }}</td>
+            <td>{{ product.iTemGroup }}</td> 
+            <td>{{ product.consumptionPerOneKM_outPut }}</td>    
             <td><button (click)="editProduct(product)">Edit</button></td>      
           </tr>
         
@@ -59,6 +39,6 @@
 </div>
 <app-edit-product 
   [product]="productToEdit" 
-  (productUpdated)="updateProductList($event)">
+  (productUpdated)="handleProcessUpdated()">
 </app-edit-product>
     

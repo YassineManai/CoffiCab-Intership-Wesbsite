@@ -17,9 +17,11 @@ export class ProductComponent implements OnInit{
   
   constructor(private productService: ProductServiceService) {}
   ngOnInit(): void {
-    this.productService
-      .getProducts()
-      .subscribe((result: Product[]) => (this.products = result));
+    this.fetchProcesses();
+  }
+
+  fetchProcesses(): void {
+    this.productService.getProducts().subscribe((result: Product[]) => (this.products = result));
   }
 
   updateProductList(products: Product[]): void {
@@ -34,5 +36,8 @@ export class ProductComponent implements OnInit{
    editProduct(product:Product){
      this.productToEdit = product;
    }
-
+   handleProcessUpdated(): void {
+    this.fetchProcesses();
+    this.productToEdit = null;
+   }
 }

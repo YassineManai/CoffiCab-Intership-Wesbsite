@@ -1,43 +1,51 @@
+
 <div *ngIf="progprofil != null">
-    <h2>{{ progprofil.idProgProfil }}</h2>
-  <table>
-    <tr>
-      <td>
-    <div>
-     <label for="Id Profil">Id Profil  </label> 
-      <input [(ngModel)]="progprofil.id_Profil"  />
-    </div>
-  </td>
-  <td>
-    <div>
-      <label for="libProgramme">libProgramme  </label> 
-      <input [(ngModel)]="progprofil.libProgramme" placeholder="libProgramme" />
-    </div>
-  </td>
-  <td>
-    <div>
-      <label for="nomProgramme">nomProgramme  </label>
-      <input [(ngModel)]="progprofil.nomProgramme" placeholder="nomProgramme" />
-    </div>
-  </td>
-  </tr>
-  <tr>
-    <td>
-        <div>
-          <label for="Intitule">Intitule  </label>
-          <input [(ngModel)]="progprofil.Intitule" placeholder="Intitule" />
-        </div>
-      </td>
-      <td>
-        <div>
-        <label for="onlyconsultation">Onlyconsultation  </label>
-        <input type="checkbox" name="onlyconsultation" [checked]='progprofil.onlyconsultation===true'  [(ngModel)]="progprofil.onlyconsultation" >
-      </div>
-      </td>
-  </tr>
-</table>
-    <button (click)="updateProgProfil(progprofil)" *ngIf="progprofil?.idProgProfil">Save</button>
-    <button (click)="deleteProgProfil(progprofil.idProgProfil!)" *ngIf="progprofil?.idProgProfil">Delete</button>
-    <button (click)="createProgProfil(progprofil)" *ngIf="!progprofil?.idProgProfil">Create</button>
-    
+  <h2>Details of the ProgProfil "{{ progprofil.idProgProfil }}"</h2>
+<div class="charsheet">
+ <header>
+     <section class="charname">
+       <label for="Id Profil">Id Profil  </label> 
+       <input [(ngModel)]="progprofil.id_Profil"  />
+     </section>
+     
+     <section class="misc">
+         <ul>
+             <li>           
+               <label for="libProgramme">libProgramme  </label> 
+               <input [(ngModel)]="progprofil.libProgramme" placeholder="libProgramme" />
+             </li>
+             <li>
+               <label for="nomProgramme">nomProgramme  </label>
+               <input [(ngModel)]="progprofil.nomProgramme" placeholder="nomProgramme" />
+             </li>
+             <li>
+               <label for="Intitule">Intitule  </label>
+               <input [(ngModel)]="progprofil.intitule" placeholder="Intitule" />
+             </li>
+             <ul>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="onlyconsultation">Onlyconsultation  </label>
+                  </div>             
+                  <input type="checkbox" name="onlyconsultation" [checked]='progprofil.onlyconsultation===true'  [(ngModel)]="progprofil.onlyconsultation" >
+                </div>
+              </li>
+             
+          </ul>
+ 
+ 
+             </ul>
+     </section>
+     
+ </header>
+
 </div>
+
+<button (click)="updateProgProfil(progprofil)" *ngIf="progprofil?.idProgProfil">Save</button>
+<button (click)="deleteProgProfil(progprofil.idProgProfil!)" *ngIf="progprofil?.idProgProfil">Delete</button>
+<button (click)="createProgProfil(progprofil)" *ngIf="!progprofil?.idProgProfil">Create</button>
+
+  
+</div>
+

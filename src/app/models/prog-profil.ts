@@ -3,6 +3,6 @@ export class ProgProfil {
     id_Profil?: number = 0;
     libProgramme?: string = "";
     nomProgramme?: string = "" ;
-    Intitule?: string = "";
+    intitule?: string = "";
     onlyconsultation?: boolean = false;
     }

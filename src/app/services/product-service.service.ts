@@ -13,7 +13,7 @@ export class ProductServiceService {
   }
 
   public updateProduct(product: Product): Observable<void> {
-    return this.http.put<void>(`${this.url}/${product.IDProcess}`, product);
+    return this.http.put<void>(`${this.url}/${product.idProduct}`, product);
   }
 
   public deleteProduct(id: number): Observable<void> {

@@ -1,39 +1,35 @@
+<h2>Brief description or introduction about the processes being managed</h2>
+<button (click)="initNewProcess()" class="button">Create new Process</button>
 
-    
-   
-    <h2>Brief description or introduction about the processes being managed</h2>
-    <button (click)="initNewProcess()" class="button">Create new Process</button>
-   
 <div class="table-wrapper">
-    <table class="fl-table">
-        <thead>
-        <tr>
-            <th>Process Code</th>
-            <th>Description</th>
-            <th>Rework</th>
-            <th>Quality Check</th>
-            <th>Warehouse</th>
-            <th>Validation Status</th>
-            <th>Setup Mandatory</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let process of processes">
-            <td>{{ process.codeProcess }}</td>
-            <td>{{ process.descProcess }}</td>
-            <td>{{ process.rework }}</td>
-            <td>{{ process.withQuality }}</td>
-            <td>{{ process.warehouseCMES }}</td>
-            <td>{{ process.withValidationManualReport }}</td>
-            <td>{{ process.withSetupMandatory }}</td>    
-            <td><button (click)="editProcess(process)">Edit</button></td>      
-          </tr>
-        </tbody>
-    </table>
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>Process Code</th>
+        <th>Description</th>
+        <th>Rework</th>
+        <th>Quality Check</th>
+        <th>Warehouse</th>
+        <th>Validation Status</th>
+        <th>Setup Mandatory</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let process of processes">
+        <td>{{ process.codeProcess }}</td>
+        <td>{{ process.descProcess }}</td>
+        <td>{{ process.rework }}</td>
+        <td>{{ process.withQuality }}</td>
+        <td>{{ process.warehouseCMES }}</td>
+        <td>{{ process.withValidationManualReport }}</td>
+        <td>{{ process.withSetupMandatory }}</td>
+        <td><button (click)="editProcess(process)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<app-edit-process 
-  [process]="processToEdit" 
-  (processUpdated)="updateProcessList($event)">
+<app-edit-process
+  [process]="processToEdit"
+  (processUpdated)="handleProcessUpdated()">
 </app-edit-process>
-    

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Process } from '../../models/process';
 import { ProcessService } from '../../services/process.service';
 import { CommonModule } from '@angular/common';
-import { EditProcessComponent } from '../edit-process/edit-process.component';
+import { EditProcessComponent } from './edit-process/edit-process.component';
 
 
 @Component({
@@ -20,9 +20,11 @@ export class ProcessComponent implements OnInit {
   
   constructor(private processService: ProcessService) {}
   ngOnInit(): void {
-    this.processService
-      .getProcesses()
-      .subscribe((result: Process[]) => (this.processes = result));
+    this.fetchProcesses();
+  }
+
+  fetchProcesses(): void {
+    this.processService.getProcesses().subscribe((result: Process[]) => (this.processes = result));
   }
 
   updateProcessList(processes: Process[]): void {
@@ -37,5 +39,10 @@ export class ProcessComponent implements OnInit {
    editProcess(process:Process){
      this.processToEdit = process;
    }
+   handleProcessUpdated(): void {
+    this.fetchProcesses();
+    this.processToEdit = null; // Hide the edit component after create/update/delete
+  }
+   
 
 }
