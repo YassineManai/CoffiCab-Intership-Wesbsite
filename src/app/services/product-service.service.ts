@@ -13,14 +13,17 @@ export class ProductServiceService {
   }
 
   public updateProduct(product: Product): Observable<void> {
-    return this.http.put<void>(`${this.url}/${product.idProduct}`, product);
+    return this.http.put<void>(`${this.url}/${product.itemCode}`, product);
   }
 
-  public deleteProduct(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.url}/${id}`);
+  public deleteProduct(itemCode: string): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${itemCode}`);
   }
 
   public createProduct(product: Product): Observable<Product> {  
     return this.http.post<Product>(this.url, product);
+  }
+  getProductsByProcessCode(codeProcess: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.url}/products?codeProcess=${codeProcess}`);
   }
 }

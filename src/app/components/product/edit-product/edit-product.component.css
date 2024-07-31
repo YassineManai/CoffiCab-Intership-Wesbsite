@@ -98,7 +98,7 @@
   }
   
   .charsheet header section.charname {
-    border: 1px solid var(--dark);
+    border: 1px solid var(--blue);
     border-right: 0;
     border-radius: var(--radius) 0 0 var(--radius);
     padding: 5px 0;
@@ -127,7 +127,7 @@
   
   .charsheet header section.misc {
   
-    border: 1px solid var(--dark);
+    border: 1px solid var(--blue);
     border-radius: var(--radius);
     padding-left: 1em;
     padding-right: 1em;
@@ -259,3 +259,13 @@ input:required:invalid {
   border-color: red;
 }
 
+.select{
+  border-radius: 0;
+  font-weight: 400;
+  color: var(--dark);
+  padding: 1px 40px;
+  line-height: normal;
+  transition: border-color 0.2s ease, outline 0.2s ease;
+  height: 30px;
+  background:var(--grey);
+}

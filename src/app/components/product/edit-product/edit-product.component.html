@@ -8,10 +8,14 @@
   <h2>Details of the Product "{{ product.idProduct }}"</h2>
 <div class="charsheet">
 <header>
-    <section class="charname">
-      <label for="IDProcess">IDProcess  </label> 
-      <input [(ngModel)]="product.idProcess"  />
-    </section>
+  <section class="charname">
+    <label  style="padding-left: 2rem;"    for="IDProcess">CodeProcess</label>
+    <select [(ngModel)]="product.codeProcess" id="IDProcess" class="select">
+      <option *ngFor="let process of processes" [value]="process.codeProcess">
+        {{ process.codeProcess }}
+      </option>
+    </select>
+  </section>
     <section class="misc1">
     <section class="misc">
         <ul>
@@ -211,7 +215,7 @@
 </div>
 
 <button (click)="updateProduct(product)" class="saveButton" *ngIf="product?.idProduct">Save</button>
-<button (click)="deleteProduct(product.idProduct!)" onclick="return confirm('Are you sure?')" class="DeleteButton" *ngIf="product?.idProduct">Delete</button>
+<button (click)="deleteProduct(product.itemCode!)" onclick="return confirm('Are you sure?')" class="DeleteButton" *ngIf="product?.idProduct">Delete</button>
 <button (click)="createProduct(product)" class="saveButton"*ngIf="!product?.idProduct">Create</button>
 
 </div>

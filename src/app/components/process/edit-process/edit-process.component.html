@@ -5,48 +5,48 @@
   <header>
       <section class="charname">
         <label for="codeProcess">codeProcess  </label> 
-        <input [(ngModel)]="process.codeProcess"  />
+        <input [(ngModel)]="process.codeProcess" placeholder="..." class="code"/>
       </section>
       <section class="misc1">
       <section class="misc">
           <ul>
               <li>           
                 <label for="descProcess">description  </label> 
-                <input [(ngModel)]="process.descProcess" placeholder="descProcess" />
+                <input [(ngModel)]="process.descProcess" placeholder="..." />
               </li>
               <li>
                 <label for="CodeProcessToRework">CodeProcessToRework  </label>
-                <input [(ngModel)]="process.codeProcessToRework" placeholder="CodeProcessToRework" />
+                <input [(ngModel)]="process.codeProcessToRework" placeholder="..." />
               </li>
               <li>
                 <label for="returnValidationProfil">returnValidationProfil  </label> 
-                <input [(ngModel)]="process.returnValidationProfil" placeholder="ReturnValidationProfil" />
+                <input [(ngModel)]="process.returnValidationProfil" placeholder="..." />
               </li>
               <li>
                 <label for="StockName">StockName  </label>
-                <input [(ngModel)]="process.stockName" placeholder="StockName" />
+                <input [(ngModel)]="process.stockName" placeholder="..." />
               </li>
               <li>
                 <label for="PLC_Assigned">PLC_Assigned  </label>
-                <input [(ngModel)]="process.plC_Assigned" placeholder="PLC_Assigned" />
+                <input [(ngModel)]="process.plC_Assigned" placeholder="..." />
               </li>
               <li>
               
                   <label for="Img_Process">Img_Process  </label>
-                  <input [(ngModel)]="process.img_Process" placeholder="Img_Process" />
+                  <input [(ngModel)]="process.img_Process" placeholder="..." />
                 
               </li>
               
               <li>
                
                   <label for="Long_Machine_Stop_min">Long_Machine_Stop_min  </label>
-                  <input [(ngModel)]="process.long_Machine_Stop_min" placeholder="Long_Machine_Stop_min" />
+                  <input [(ngModel)]="process.long_Machine_Stop_min" placeholder="..." />
                
               </li>
               <li>
                
                   <label for="Model_Label">Model_Label  </label>
-                  <input [(ngModel)]="process.model_Label" placeholder="Model_Label" />
+                  <input [(ngModel)]="process.model_Label" placeholder="..." />
                
               </li>
 
@@ -298,7 +298,7 @@
   
 
     <button (click)="updateProcess(process)" class="saveButton"  *ngIf="process?.idPorcess">Save</button>
-    <button (click)="deleteProcess(process.idPorcess!)" onclick="return confirm('Are you sure?')" class="DeleteButton" *ngIf="process?.idPorcess">Delete</button>
+    <button (click)="deleteProcess(process.codeProcess!)" onclick="return confirm('Are you sure?')" class="DeleteButton" *ngIf="process?.idPorcess">Delete</button>
     <button (click)="createProcess(process)" class="saveButton" *ngIf="!process?.idPorcess">Create</button>
     
 </div>

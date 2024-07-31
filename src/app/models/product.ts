@@ -1,11 +1,11 @@
 export class Product {
-    idProduct?: number = 0;
+    idProduct?: number ;
     typeProduct?: string = "";
     itemCode?: string = "";
+    codeProcess?:string="";
     itemDesc?: string = "" ;
     parentItemCode?: string = "";
     image?: string = "";
-    idProcess?: number = 0;
     ParentIDProduct?: number = 0;
     codeItemModel?: string = "";
     iTemGroup?: string = "";

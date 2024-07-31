@@ -48,13 +48,13 @@ h2{
 
 .fl-table thead th {
     color: #ffffff;
-    background: #4FC3A1;
+    background: #3c91e6;
 }
 
 
 .fl-table thead th:nth-child(odd) {
     color: #ffffff;
-    background: #324960;
+    background: #3c91e6;
 }
 
 .fl-table tr:nth-child(even) {
@@ -126,6 +126,7 @@ h2{
         text-align: center;
     }
 }
+
 .button {
     height: 36px;
     padding: 0 16px;

@@ -24,7 +24,9 @@
         <td>{{ process.warehouseCMES }}</td>
         <td>{{ process.withValidationManualReport }}</td>
         <td>{{ process.withSetupMandatory }}</td>
-        <td><button (click)="editProcess(process)">Edit</button></td>
+        <td><button (click)="editProcess(process)">Edit</button>
+          <button (click)="navigateToProcessProducts(process.codeProcess!)">View Products</button>
+        </td>
       </tr>
     </tbody>
   </table>

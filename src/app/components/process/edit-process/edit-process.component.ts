@@ -17,29 +17,42 @@ import { ProcessService } from '../../../services/process.service';
 export class EditProcessComponent implements OnInit {
   @Input() process: Process | null = null;
   @Output() processUpdated = new EventEmitter<void>();
-
+  processes: Process[] = [];
   constructor(private processService: ProcessService) {}
 
-  ngOnInit(): void {}
-
+  ngOnInit(): void {
+    this.fetchProcesses();
+  }
+  fetchProcesses(): void {
+    this.processService.getProcesses().subscribe((result: Process[]) => {
+      this.processes = result;
+    });
+  }
   updateProcess(process: Process): void {
     this.processService.updateProcess(process)
       .subscribe(() => this.processUpdated.emit());
   }
 
-  deleteProcess(processId: number): void {
-    this.processService.deleteProcess(processId)
+  deleteProcess(codeprocess: string): void {
+    this.processService.deleteProcess(codeprocess)
       .subscribe(() => this.processUpdated.emit());
   }
 
   createProcess(process: Process): void {
-    if (this.isValidProcess(process)) {
-      this.processService.createProcess(process)
-        .subscribe(() => this.processUpdated.emit());
+    if (this.isDuplicateProcess(process)) {
+      alert('A process with the same CodeProcess already exists.');
+    } else if (this.isValidProcess(process)) {
+      this.processService.createProcess(process).subscribe(() => this.processUpdated.emit());
     } else {
       alert('Please fill in all the required fields.');
     }
   }
+
+  isDuplicateProcess(process: Process): boolean {
+    const newCodeProcess = process.codeProcess?.toUpperCase();
+    return this.processes.some(existingProcess => existingProcess.codeProcess?.toUpperCase() === newCodeProcess);
+  }
+  
 
   isValidProcess(process: Process): boolean {
     const requiredFields = [

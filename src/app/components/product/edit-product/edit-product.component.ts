@@ -3,6 +3,8 @@ import { Product } from '../../../models/product';
 import { ProductServiceService } from '../../../services/product-service.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Process } from '../../../models/process'; // Import Process model
+import { ProcessService } from '../../../services/process.service';
 @Component({
   selector: 'app-edit-product',
   standalone: true,
@@ -14,10 +16,20 @@ import { CommonModule } from '@angular/common';
 export class EditProductComponent implements OnInit {
   @Input() product: Product | null = null;
   @Output() productUpdated = new EventEmitter<void>();
+  processes: Process[] = []; // Add a processes array
 
-  constructor(private productService: ProductServiceService) {}
+  constructor
+  (private productService: ProductServiceService,
+   private processService: ProcessService
+  )
+   {}
 
-  ngOnInit(): void {  }
+  ngOnInit(): void { 
+    this.fetchProcesses();
+   }
+   fetchProcesses(): void {
+    this.processService.getProcesses().subscribe((result: Process[]) => (this.processes = result));
+  }
 
   updateProduct(product: Product): void {
     console.log(product)
@@ -25,9 +37,9 @@ export class EditProductComponent implements OnInit {
       .subscribe(() => this.productUpdated.emit());
   }
 
-  deleteProduct(id: number): void {
-    console.log(id)
-    this.productService.deleteProduct(id)
+  deleteProduct(itemCode: string): void {
+    console.log(itemCode)
+    this.productService.deleteProduct(itemCode)
       .subscribe(() => this.productUpdated.emit());
   }
 

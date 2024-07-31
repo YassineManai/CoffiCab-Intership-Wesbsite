@@ -16,11 +16,11 @@ export class ProcessService {
   }
 
   public updateProcess(process: Process): Observable<void> {
-    return this.http.put<void>(`${this.url}/${process.idPorcess}`, process);
+    return this.http.put<void>(`${this.url}/${process.codeProcess}`, process);
   }
 
-  public deleteProcess(processId: number): Observable<void> {
-    return this.http.delete<void>(`${this.url}/${processId}`);
+  public deleteProcess(codeprocess: string): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${codeprocess}`);
   }
 
   public createProcess(process: Process): Observable<Process> {  

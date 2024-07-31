@@ -1,0 +1,24 @@
+<h2>Products for Process: {{ codeProcess }}</h2>
+<div *ngIf="products.length > 0; else noProducts">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>Product Code</th>
+        <th>Product Name</th>
+        <th>Description</th>
+        <!-- Add other product fields as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.itemDesc }}</td>
+        <td>{{ product.itemCode }}</td>
+        <td>{{ product.iTemGroup }}</td>
+        <!-- Add other product fields as needed -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noProducts>
+  <p>No products found for this process.</p>
+</ng-template>

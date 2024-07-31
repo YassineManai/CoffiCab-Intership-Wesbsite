@@ -6,6 +6,7 @@ import { ProgProfilesComponent } from './components/prog-profiles/prog-profiles.
 import { ProductComponent } from './components/product/product.component';
 import { CaracterStartofshiftvaluesComponent } from './components/caracter-startofshiftvalues/caracter-startofshiftvalues.component';
 import { ProgProfilComponent } from './components/prog-profil/prog-profil.component';
+import { ProcessProductsComponent } from './components/process-products/process-products.component';
 
 export const routes: Routes = [
     {path: 'Machine',component: MachineComponent },
@@ -14,6 +15,7 @@ export const routes: Routes = [
     {path: 'ProgProfil',component: ProgProfilComponent},
     {path: 'Product',component: ProductComponent},
     {path: 'CaractersStartofShiftValues',component: CaracterStartofshiftvaluesComponent},
+    {path: 'Procces_Products',component: ProcessProductsComponent},
 
 
 
