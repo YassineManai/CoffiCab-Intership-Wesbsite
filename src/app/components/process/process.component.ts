@@ -43,9 +43,7 @@ export class ProcessComponent implements OnInit {
     this.fetchProcesses();
     this.processToEdit = null; // Hide the edit component after create/update/delete
   }
-  navigateToProcessProducts(codeProcess: string): void {
-    this.router.navigate(['/process-product', codeProcess]);
-  }
+ 
 
 
 }

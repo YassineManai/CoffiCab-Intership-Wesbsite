@@ -30,8 +30,10 @@
             <td>{{ product.codeItemModel }}</td>
             <td>{{ product.warehouse }}</td>
             <td>{{ product.iTemGroup }}</td> 
-            <td>{{ product.consumptionPerOneKM_outPut }}</td>    
-            <td><button (click)="editProduct(product)">Edit</button></td>      
+            <td>{{ product.consumptionPerOneKM_outPut }}</td>            
+            <td>
+              <img title="Details" class="img-responsive" src="./../../../assets/images/details.png" (click)="editProduct(product)" >
+            </td> 
           </tr>
         
         </tbody>

@@ -5,48 +5,48 @@
   <header>
       <section class="charname">
         <label for="codeProcess">codeProcess  </label> 
-        <input [(ngModel)]="process.codeProcess" placeholder="..." class="code"/>
+        <input [(ngModel)]="process.codeProcess"  class="code"/>
       </section>
       <section class="misc1">
-      <section class="misc">
+      <section class="misc2">
           <ul>
               <li>           
                 <label for="descProcess">description  </label> 
-                <input [(ngModel)]="process.descProcess" placeholder="..." />
+                <input [(ngModel)]="process.descProcess"  />
               </li>
               <li>
                 <label for="CodeProcessToRework">CodeProcessToRework  </label>
-                <input [(ngModel)]="process.codeProcessToRework" placeholder="..." />
+                <input [(ngModel)]="process.codeProcessToRework"  />
               </li>
               <li>
                 <label for="returnValidationProfil">returnValidationProfil  </label> 
-                <input [(ngModel)]="process.returnValidationProfil" placeholder="..." />
+                <input [(ngModel)]="process.returnValidationProfil"  />
               </li>
               <li>
                 <label for="StockName">StockName  </label>
-                <input [(ngModel)]="process.stockName" placeholder="..." />
+                <input [(ngModel)]="process.stockName"  />
               </li>
               <li>
                 <label for="PLC_Assigned">PLC_Assigned  </label>
-                <input [(ngModel)]="process.plC_Assigned" placeholder="..." />
+                <input [(ngModel)]="process.plC_Assigned"  />
               </li>
               <li>
               
                   <label for="Img_Process">Img_Process  </label>
-                  <input [(ngModel)]="process.img_Process" placeholder="..." />
+                  <input [(ngModel)]="process.img_Process"  />
                 
               </li>
               
               <li>
                
                   <label for="Long_Machine_Stop_min">Long_Machine_Stop_min  </label>
-                  <input [(ngModel)]="process.long_Machine_Stop_min" placeholder="..." />
+                  <input [(ngModel)]="process.long_Machine_Stop_min"  />
                
               </li>
               <li>
                
                   <label for="Model_Label">Model_Label  </label>
-                  <input [(ngModel)]="process.model_Label" placeholder="..." />
+                  <input [(ngModel)]="process.model_Label"  />
                
               </li>
 
@@ -264,7 +264,7 @@
          
               <li>
                 <div class="box">
-                  <div style=" width: 750px;">
+                  <div style=" width: 405px;">
                 <label for="accept_OK_NOT_INC_Spools_As_input_Rewinders">accept_OK_NOT_INC_Spools_As_input_Rewinders  </label>
                   </div>
                 <input type="checkbox" name="accept_OK_NOT_INC_Spools_As_input_Rewinders" [checked]='process.accept_OK_NOT_INC_Spools_As_input_Rewinders===true'  [(ngModel)]="process.accept_OK_NOT_INC_Spools_As_input_Rewinders" >
