@@ -3,6 +3,8 @@ import { ProgProfil } from '../../../models/prog-profil';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ProgprofilService } from '../../../services/progprofil.service';
+import { ProfileUser } from '../../../models/profileuser';
+import { ProfileUserService } from '../../../services/profiluser-service';
 
 @Component({
   selector: 'app-edit-progprofil',
@@ -18,16 +20,19 @@ export class EditProgprofilComponent implements OnInit {
   @Input() progprofil: ProgProfil | null = null;
   @Output() progProfilUpdated = new EventEmitter<void>();
   progProfils: ProgProfil[] = [];
+  profilusers:ProfileUser[] = [];
+  
 
-  constructor(private progprofilService: ProgprofilService) {}
+
+  constructor(private progprofilService: ProgprofilService, private profilUserService: ProfileUserService) {}
 
   ngOnInit(): void {
-    this.fetchProgProfils();
+    this.fetchProfils();
   }
 
-  fetchProgProfils(): void {
-    this.progprofilService.getProgProfils().subscribe((result: ProgProfil[]) => {
-      this.progProfils = result;
+  fetchProfils(): void {
+    this.profilUserService.getProfileUsers().subscribe((result: ProfileUser[]) => {
+      this.profilusers = result;
     });
   }
 

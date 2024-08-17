@@ -4,7 +4,7 @@ import { Process } from '../../models/process';
 import { ProcessService } from '../../services/process.service';
 import { CommonModule } from '@angular/common';
 import { EditProcessComponent } from './edit-process/edit-process.component';
-import { Router } from '@angular/router'; // Import Router
+
 
 @Component({
   selector: 'app-process',
@@ -18,7 +18,7 @@ export class ProcessComponent implements OnInit {
   processToEdit: Process | null = null;
 
 
-  constructor(private processService: ProcessService,private router: Router) { }
+  constructor(private processService: ProcessService) { }
   ngOnInit(): void {
     this.fetchProcesses();
   }

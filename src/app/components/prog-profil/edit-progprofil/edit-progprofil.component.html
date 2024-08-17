@@ -4,8 +4,13 @@
   <div class="charsheet">
     <header>
       <section class="charname">
-        <label for="Id Profil">Id Profil </label>
-        <input [(ngModel)]="progprofil.id_Profil" />
+        <label style="padding-left: 40%;" for="IDProcess">ID_Profil</label>
+        <select [(ngModel)]="progprofil.id_Profil" id="IDProcess"
+          class="select">
+          <option *ngFor="let profil of profilusers" [value]="profil.id_Profil">
+            {{ profil.id_Profil }}
+          </option>
+        </select>
       </section>
 
       <section class="misc1">
@@ -13,17 +18,16 @@
           <ul>
             <li>
               <label for="libProgramme">libProgramme </label>
-              <input [(ngModel)]="progprofil.libProgramme"
-                placeholder="libProgramme" />
+              <input [(ngModel)]="progprofil.libProgramme" />
             </li>
             <li>
               <label for="nomProgramme">nomProgramme </label>
               <input [(ngModel)]="progprofil.nomProgramme"
-                placeholder="nomProgramme" />
+                />
             </li>
             <li>
               <label for="Intitule">Intitule </label>
-              <input [(ngModel)]="progprofil.intitule" placeholder="Intitule" />
+              <input [(ngModel)]="progprofil.intitule" />
             </li>
           </ul>
         </section>
