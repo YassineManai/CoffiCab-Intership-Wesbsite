@@ -23,7 +23,5 @@ export class CaracterService {
   public createCaracter(caracter: Caracter): Observable<Caracter> {  
     return this.http.post<Caracter>(this.url, caracter);
   }
-  getProductsByProcessCode(codeProcess: string): Observable<Caracter[]> {
-    return this.http.get<Caracter[]>(`${this.url}/products?codeProcess=${codeProcess}`);
-  }
+ 
 }

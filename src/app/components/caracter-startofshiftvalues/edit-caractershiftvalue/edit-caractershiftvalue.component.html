@@ -1,0 +1,58 @@
+
+
+<div *ngIf="caractershift != null">
+
+    <h2>Details of the Caracter
+        "{{ caractershift.idCaractersStartOfShiftValues }}"</h2>
+    <div class="charsheet">
+        <header>
+            <section class="charname">
+                <label for="TypeProduct">codeCaracter </label>
+                <input [(ngModel)]="caractershift.codeCaracterStartOFShift" />
+            </section>
+            <section class="misc1">
+                <section class="misc2">
+                    <ul>
+                        <li>
+                            <label for="TypeProduct">id_poste </label>
+                            <input [(ngModel)]="caractershift.id_Poste" />
+                        </li>
+                        <li>
+                            <label for="ItemCode">value </label>
+                            <input [(ngModel)]="caractershift.value" />
+                        </li>
+                        <li>
+                            <label for="ItemDesc">user </label>
+                            <input [(ngModel)]="caractershift.user" />
+                        </li>
+
+                        <li>
+
+                            <label style="padding-left: 2rem;"
+                                for="IDProcess">CodeProcess</label>
+                            <select [(ngModel)]="caractershift.machine_Code"
+                                id="IDProcess" class="select">
+                                <option *ngFor="let machine of machines"
+                                    [value]="machine.machine_Code">
+                                    {{ machine.machine_Code }}
+                                </option>
+                            </select>
+
+                        </li>
+
+                    </ul>
+                </section>
+
+            </section>
+        </header>
+    </div>
+
+    <button (click)="updateCaraterShift(caractershift)" class="saveButton"
+        *ngIf="caractershift?.idCaractersStartOfShiftValues">Save</button>
+    <button (click)="deleteCaraterShift(caractershift.codeCaracterStartOFShift)"
+        onclick="return confirm('Are you sure?')" class="DeleteButton"
+        *ngIf="caractershift?.idCaractersStartOfShiftValues">Delete</button>
+    <button (click)="createCaracter(caractershift)" class="saveButton"
+        *ngIf="!caractershift?.idCaractersStartOfShiftValues">Create</button>
+
+</div>
