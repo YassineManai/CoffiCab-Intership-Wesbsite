@@ -1,5 +1,5 @@
 <h2>Brief description or introduction about the ProgProfil being managed</h2>
-<button (click)="initNewProgProfil()" class="button" >Create new Prog-profil</button>
+<button (click)="initNewProgProfil()" class="button" >Create new Prog_profil</button>
  
 <div class="table-wrapper">
     <table class="fl-table">
@@ -10,6 +10,7 @@
             <th>nomProgramme</th>
             <th>Intitule</th>
             <th>onlyconsultation</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -20,14 +21,16 @@
               <td>{{ prog.intitule }}</td>
               <td>{{ prog.onlyconsultation }}</td>
               
-              <td><button (click)="editProgProfil(prog)">Edit</button></td>      
+              <td>
+                <img title="Details" class="img-responsive" src="./../../../assets/images/details.png" (click)="editProgProfil(prog)" >
+              </td>   
             </tr>
           </tbody>
     </table>
 </div>
 <app-edit-progprofil 
   [progprofil]="progProfilToEdit" 
-  (progProfilEdited)="updateProgProfilList($event)">
+  (progProfilUpdated)="handleProgProfilUpdated()">
 </app-edit-progprofil>
 
 

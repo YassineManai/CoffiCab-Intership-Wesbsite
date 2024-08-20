@@ -121,7 +121,7 @@ div.box {
   padding-left: 1em;
   font-family: var(--poppins);
   margin-bottom: 5px;
-  color: var(--blue);
+  color: var(--dark);
   font-size: 15px;
 }
 
@@ -143,24 +143,25 @@ div.box {
   width: 33.33333%;
   display: flex;
   flex-direction: column-reverse;
+  margin-bottom: 10px;
 }
 
 .charsheet header section.misc ul li label {
   font-family: var(--poppins);
   margin-bottom: 5px;
-  color: var(--blue);
+  color: var(--dark);
   font-size: 15px;
 }
 
 .charsheet header section.misc ul li input {
-  flex-grow: 1;
+ 
   padding: 0 16px;
   height: 100%;
   border: none;
-  background: var(--grey);
-  border-radius: 36px 0 0 36px;
+  
+  border-radius: 36px 36px 36px 36px;
   outline: none;
-  width: 100%;
+  width: 200px;
   color: var(--dark);
   padding: 0.4rem;
   font-size: 18px;
@@ -199,6 +200,7 @@ form.charsheet header section.misc1 ul li {
   width: 33.33333%;
   display: flex;
   flex-direction: column-reverse;
+  
 }
 
 form.charsheet header section.misc1 ul li label {
@@ -209,6 +211,95 @@ form.charsheet header section.misc ul li input {
   border: 0;
   border-bottom: 1px solid var(--faded);
 }
+
+
+
+
+form.charsheet header section.misc2 {
+ 
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+form.charsheet header section.misc2 ul {
+  padding: 10px 0px 5px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form.charsheet header section.misc2 ul li {
+  width: 33.33333%;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+form.charsheet header section.misc2 ul li label {
+  margin-bottom: 5px;
+}
+
+form.charsheet header section.misc ul li input {
+  border: 0;
+  border-bottom: 1px solid var(--faded);
+}
+
+
+
+
+.charsheet header section.misc2 {
+
+  border: 1px solid var(--blue);
+  border-radius: var(--radius);
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.charsheet header section.misc2 ul {
+  padding: 10px 0px 5px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.charsheet header section.misc2 ul li {
+  width: 33.33333%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: space-between
+}
+
+.charsheet header section.misc2 ul li label {
+  font-family: var(--poppins);
+  margin-bottom: 5px;
+  color: var(--dark);
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+.charsheet header section.misc2 ul li input {
+ 
+  padding: 0 16px;
+  height: 100%;
+  border: none;
+  
+  border-radius: 36px 36px 36px 36px;
+  outline: none;
+  width: 200px;
+  color: var(--dark);
+  padding: 0.4rem;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
 
 .saveButton {
   height: 36px;
@@ -274,11 +365,12 @@ background:var(--grey);
     padding: 0 16px;
     height: 100%;
     border: none;
-    background: var(--grey);
-    border-radius: 36px 0 0 36px;
+    
+    border-radius: 36px 36px 36px 36px;
     outline: none;
     width: 160px;
     color: var(--dark);
     padding: 0.4rem;
     font-size: 18px;
 }
+

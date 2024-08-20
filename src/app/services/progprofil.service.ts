@@ -12,7 +12,7 @@ export class ProgprofilService {
     return this.http.get<ProgProfil[]>(this.url);
   }
   public updateProgProfil(pr: ProgProfil): Observable<void> {
-    return this.http.put<void>(`${this.url}/${pr.idProgProfil}`, process);
+    return this.http.put<void>(`${this.url}/${pr.idProgProfil}`, pr);
   }
 
   public deleteProgProfil(id: number): Observable<void> {

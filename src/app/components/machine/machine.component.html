@@ -1,47 +1,37 @@
-<div class="head-title">
-    <div class="left">
-      <h1>Process Overview</h1>
-      <ul class="breadcrumb">
-        <li>
-          <a href="#">Dashboard</a>
-        </li>
-        <li><i class='bx bx-chevron-right' ></i></li>
-        <li>
-          <a class="active" href="#">Process Overview</a>
-        </li>
-      </ul>
-    </div>
-    <a href="#" class="btn-download">
-      <i class='bx bxs-cloud-download' ></i>
-      <span class="text">Download PDF</span>
-    </a>
-  </div>
+<h2>Brief description or introduction about the machines being managed</h2>
+<button (click)="initNewMachine()" class="button">Create new Machine</button>
 
-  
-  
-<div>
-    
-   
-    <h2>Brief description or introduction about the processes being managed</h2>
-   
 <div class="table-wrapper">
-    <table class="fl-table">
-        <thead>
-        <tr>
-            <th>Process Code</th>
-            <th>Description</th>
-            <th>Rework</th>
-            <th>Quality Check</th>
-            <th>Warehouse</th>
-            <th>Validation Status</th>
-            <th>Setup Mandatory</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-         
-        </tbody>
-    </table>
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>machine_Code</th>
+        <th>description</th>
+        <th>noK_Location</th>
+        <th>noK_Warehouse</th>
+        <th>nameMachine</th>
+        <th>codeProcess</th>
+        <th>bulding</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let machine of machines">
+        <td>{{ machine.machine_Code }}</td>
+        <td>{{ machine.description }}</td>
+        <td>{{ machine.noK_Location }}</td>
+        <td>{{ machine.noK_Warehouse }}</td>
+        <td>{{ machine.nameMachine }}</td>
+        <td>{{ machine.codeProcess }}</td>
+        <td>{{ machine.bulding }}</td>
+        <td>
+          <img title="Details" class="img-responsive" src="./../../../assets/images/details.png" (click)="editMachine(machine)" >
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-    
+<app-edit-machine
+[machine]="machineToEdit" 
+  (machineupdated)="handleMachineUpdated()">
+></app-edit-machine>
