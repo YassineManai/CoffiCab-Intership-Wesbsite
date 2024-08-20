@@ -1,9 +1,9 @@
 export class Machine {
-    iDPlant_Machine?: number ;
+    idPlant_Machine?: number = 0;
     machine_Code?: string = "";
     description?: string = "";
-    nOK_Location?:string="";
-    nOK_Warehouse?: string = "" ;
+    noK_Location?: string = "";
+    noK_Warehouse?: string = "";
     oK_Location?: string = "";
     oK_Warehouse?: string = "";
     nameMachine?: string = "";
@@ -14,31 +14,31 @@ export class Machine {
     actualUser?: string = "";
     codeZone?: string = "";
     type?: string = "";
-    aff_Input_Interface_Prod?: string = "";
-    onlyWithPO?: string = "";
-    actualRecette_ValitadedSetup?: boolean=false;
-    with_Consumption?: boolean=false;
-    with_Integration_ERP?: boolean=false;
-    dec_In_Quality?: boolean=false;
+    aff_Input_Interface_Prod?: number = 0;
+    onlyWithPO?: boolean = false;
+    actualRecette_ValitadedSetup?: boolean = false;
+    with_Consumption?: boolean = false;
+    with_Integration_ERP?: boolean = false;
+    dec_In_Quality?: boolean = false;
     actualUser_Qualite?: string = "";
-    with_Contro_Input_BOM?: boolean=false;
+    with_Contro_Input_BOM?: boolean = false;
     repertoireReport?: string = "";
     repertoireReportArchive?: string = "";
     repertoireReportRejete?: string = "";
-    rapport_Externe?: boolean=false;
-    sN_Machine?: boolean=false;
+    rapport_Externe?: boolean = false;
+    sN_Machine?: boolean = false;
     plan_Affichage_Interface_Prod?: number = 0;
-    verification_Complement_Par_Ligne?: boolean=false;
-    with_Remplissage?: boolean=false;
+    verifiation_Complement_Par_Ligne?: boolean = false;
+    with_Remplissage?: boolean = false;
     startingTimeCalculeStop?: number = 0;
-    format_Date_Report?:string = "";
-    affectation_Direct_Ray?:  boolean = false;
+    format_Date_Report?: string = "";
+    affectation_Direct_Ray?: boolean = false;
     readingReport?: string = "";
     verrouOF?: boolean = false;
-    type_Fic?: number = 0;
+    type_Fic?: string = "";
     type_Machine?: string = "";
-    grp_Objectif?: number = 0;
-    code_Process2?: number = 0;
+    grp_Objectif?: string = "";
+    code_Process2?: string = "";
     unite?: string = "";
     wip_After_Validation_QA?: boolean = false;
     without_Quality?: boolean = false;
@@ -55,10 +55,10 @@ export class Machine {
     withScrapDeclaration?: boolean = false;
     scrapDeclarationMode_A_1_M_0?: boolean = false;
     with_CB_In_Production_NOK?: boolean = false;
-    iRR_Real_Time_From_XML_File?: boolean = false;
+    irR_Real_Time_From_XML_File?: boolean = false;
     disable_the_use_of_Machine_detected_Issues?: boolean = false;
     with_delete_report?: boolean = false;
-    tPV100_100?: boolean = false;
+    tpV100_100?: boolean = false;
     with_Many_Input_For_Extrusion?: boolean = false;
     time_waiting_before_validation_next_report?: number = 0;
     modif_Recipe_OPC_MUL?: boolean = false;
@@ -71,5 +71,5 @@ export class Machine {
     setup_Location?: string = "";
     inspection_Warehouse?: string = "";
     inspection_Location?: string = "";
-}
 
+}

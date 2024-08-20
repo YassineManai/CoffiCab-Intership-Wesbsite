@@ -1,0 +1,37 @@
+<h2>Brief description or introduction about the caracters being managed</h2>
+<button (click)="initNewCaracter()" class="button">Create new Caracter</button>
+
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>codeCaracter</th>
+        <th>descCaracter</th>
+        <th>unit_of_measure</th>
+        <th>type</th>
+        <th>masqueSaisie</th>
+        <th>codeProcess</th>
+        <th>code_OPC</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let caracter of caracters">
+        <td>{{ caracter.codeCaracter }}</td>
+        <td>{{ caracter.descCaracter }}</td>
+        <td>{{ caracter.unit_of_measure }}</td>
+        <td>{{ caracter.type }}</td>
+        <td>{{ caracter.masqueSaisie }}</td>
+        <td>{{ caracter.codeProcess }}</td>
+        <td>{{ caracter.code_OPC }}</td>
+        <td>
+          <img title="Details" class="img-responsive" src="./../../../assets/images/details.png" (click)="editCaracter(caracter)" >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-edit-caracter
+[caracter]="caracterToEdit" 
+  (machineupdated)="handleCaracterUpdated()">
+></app-edit-caracter>

@@ -16,7 +16,7 @@ export class Product {
     codeItemNature?: string = "";
     localItemCode?: string = "";
     codeRecette?: string = "";
-    speed?: number = 0;
+    speed?: number;
     cunsumptionCopperKgPerOneKM?: number = 0;
     cunsumptionPVCKgPerOneKM?: number = 0;
     famille?: string = "";
