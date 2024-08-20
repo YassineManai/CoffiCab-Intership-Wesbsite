@@ -1,5 +1,5 @@
 <h2>Brief description or introduction about the ProgProfil being managed</h2>
-<button (click)="initNewProgProfil()">Create new Process</button>
+<button (click)="initNewProgProfil()" class="button" >Create new Prog-profil</button>
  
 <div class="table-wrapper">
     <table class="fl-table">
@@ -29,5 +29,6 @@
   [progprofil]="progProfilToEdit" 
   (progProfilEdited)="updateProgProfilList($event)">
 </app-edit-progprofil>
+
 
 

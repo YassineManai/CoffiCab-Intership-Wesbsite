@@ -15,7 +15,7 @@ export const routes: Routes = [
     {path: 'ProgProfil',component: ProgProfilComponent},
     {path: 'Product',component: ProductComponent},
     {path: 'CaractersStartofShiftValues',component: CaracterStartofshiftvaluesComponent},
-    {path: 'Procces_Products',component: ProcessProductsComponent},
+    {path: 'process-products',component: ProcessProductsComponent},
 
 
 
