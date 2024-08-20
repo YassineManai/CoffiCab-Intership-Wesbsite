@@ -19,11 +19,8 @@ public deleteCaracterValues(idCaracterValues: number): Observable<void> {
   return this.http.delete<void>(`${this.url}/${idCaracterValues.toString()}`);
 }
 
-public createCaracterValues(caracter: Caracter): Observable<Caracter> {  
-  return this.http.post<Caracter>(this.url, caracter);
-}
-getValuesByCaracterCode(codeProcess: string): Observable<Caracter[]> {
-  return this.http.get<Caracter[]>(`${this.url}/products?codeProcess=${codeProcess}`);
+public createCaracterValues(value: CaracterValues): Observable<CaracterValues> {  
+  return this.http.post<CaracterValues>(this.url, value);
 }
 
 

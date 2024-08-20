@@ -7,6 +7,7 @@ import { ProductComponent } from './components/product/product.component';
 import { CaracterStartofshiftvaluesComponent } from './components/caracter-startofshiftvalues/caracter-startofshiftvalues.component';
 import { ProgProfilComponent } from './components/prog-profil/prog-profil.component';
 import { CaracterComponent } from './components/caracter/caracter.component';
+import { CaracterValuesComponent } from './components/caracter-values/caracter-values.component';
 
 export const routes: Routes = [
     {path: 'Machine',component: MachineComponent },
@@ -16,6 +17,7 @@ export const routes: Routes = [
     {path: 'Product',component: ProductComponent},
     {path: 'CaractersStartofShiftValues',component: CaracterStartofshiftvaluesComponent},
     {path: 'Caracters',component: CaracterComponent},
+    {path: 'CaracterValues',component: CaracterValuesComponent},
     
 
 

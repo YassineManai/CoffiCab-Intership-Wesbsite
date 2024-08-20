@@ -1,0 +1,34 @@
+<h2>Brief description or introduction about the caracters Values being managed</h2>
+<button (click)="initNewCaracterValues()" class="button">Create new Caracter Value</button>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>value1Caracter</th>
+        <th>codeCaracter</th>
+        <th>iTemGroup</th>
+        <th>value2Caracter</th>
+        <th>operationArithmetique1</th>
+        <th>operationArithmetique2</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cv of values">
+        <td>{{ cv.value1Caracter }}</td>
+        <td>{{ cv.codeCaracter }}</td>
+        <td>{{ cv.iTemGroup }}</td>
+        <td>{{ cv.value2Caracter }}</td>
+        <td>{{ cv.operationArithmetique1 }}</td>
+        <td>{{ cv.operationArithmetique2 }}</td>
+        <td>
+          <img title="Details" class="img-responsive" src="./../../../assets/images/details.png" (click)="editCaracterValues(cv)" >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-edi-caractervalues
+[value]="valueToEdit" 
+  (caracterValueupdated)="handleCaracterValueUpdated()">
+></app-edi-caractervalues>
