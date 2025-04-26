@@ -1,0 +1,37 @@
+<h2>Brief description or introduction about the machines being managed</h2>
+<button (click)="initNewMachine()" class="button">Create new Machine</button>
+
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>machine_Code</th>
+        <th>description</th>
+        <th>noK_Location</th>
+        <th>noK_Warehouse</th>
+        <th>nameMachine</th>
+        <th>codeProcess</th>
+        <th>bulding</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let machine of machines">
+        <td>{{ machine.machine_Code }}</td>
+        <td>{{ machine.description }}</td>
+        <td>{{ machine.noK_Location }}</td>
+        <td>{{ machine.noK_Warehouse }}</td>
+        <td>{{ machine.nameMachine }}</td>
+        <td>{{ machine.codeProcess }}</td>
+        <td>{{ machine.bulding }}</td>
+        <td>
+          <img title="Details" class="img-responsive" src="./../../../assets/images/details.png" (click)="editMachine(machine)" >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-edit-machine
+[machine]="machineToEdit" 
+  (machineupdated)="handleMachineUpdated()">
+></app-edit-machine>

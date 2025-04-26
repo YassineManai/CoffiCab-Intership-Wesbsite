@@ -1,0 +1,35 @@
+<h2>Brief description or introduction about the caracters being managed</h2>
+<button (click)="initNewCaracterShift()" class="button">Create new Caracter</button>
+
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>codeCaracterStartOFShift</th>
+        <th>machine_Code</th>
+        <th>id_Poste</th>
+        <th>type</th>
+        <th>user</th>
+        <th>value</th>
+      
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let caracter of caracterShifts">
+        <td>{{ caracter.codeCaracterStartOFShift }}</td>
+        <td>{{ caracter.machine_Code }}</td>
+        <td>{{ caracter.id_Poste }}</td>
+        <td>{{ caracter.user }}</td>
+        <td>{{ caracter.value }}</td>
+        <td>
+          <img title="Details" class="img-responsive" src="./../../../assets/images/details.png" (click)="editCaracterShift(caracter)" >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-edit-caractershiftvalue
+[caractershift]="caracterShitToEdit" 
+  (caractershiftupdated)="handleCaracterShiftUpdated()">
+></app-edit-caractershiftvalue>

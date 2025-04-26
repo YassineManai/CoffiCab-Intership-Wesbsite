@@ -1,0 +1,376 @@
+:root {
+  --sheet-width: 800px;
+  --bg: white;
+  --faded: #ddd;
+  --faded-light: #eee;
+  --faded-dark: #bbb;
+  --radius: 10px;
+  --gutter: 10px;
+  --bubble-size: 10px;
+  --small-box-width: 30px;
+  --large-box-width: 70px;
+}
+
+.red {
+  background: red;
+}
+
+.blue {
+  background: blue;
+}
+
+.hide {
+  display: none !important;
+}
+
+textarea {
+  font-size: 12px;
+  text-align: left;
+  width: calc(100% - var(--radius) * 2 - 2px);
+  border-radius: var(--radius);
+  padding: var(--radius);
+  resize: none;
+  overflow: hidden;
+  height: 15em;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+div.box {
+  margin-top: var(--gutter);
+}
+
+.charsheet {
+  width: var(--sheet-width);
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.charsheet div.textblock {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: center;
+}
+
+.charsheet div.textblock label {
+  text-align: center;
+  border: 1px solid black;
+  border-top: 0;
+  font-size: 10px;
+  width: calc(100% - var(--radius) * 2 - 2px);
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 4px 0;
+  font-weight: bold;
+}
+
+.charsheet div.textblock textarea {
+  border: 1px solid black;
+}
+
+.charsheet ul {
+  margin: 0;
+  padding: 0;
+}
+
+.charsheet ul li {
+  list-style-image: none;
+  display: block;
+}
+
+.charsheet ::placeholder {
+  color: var(--faded-dark);
+}
+
+.charsheet label {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.charsheet header {
+  display: flex;
+  align-items: stretch;
+}
+
+.charsheet header section.charname {
+  border: 1px solid var(--blue);
+  border-right: 0;
+  border-radius: var(--radius) 0 0 var(--radius);
+  padding: 5px 0;
+  background-color: var(--faded-light);
+  width: 30%;
+  display: flex;
+  flex-direction: column-reverse;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+.charsheet header section.charname input {
+  padding: 0.5em;
+  margin: 5px;
+  border: 0;
+}
+
+.charsheet header section.charname label {
+  padding-left: 1em;
+  font-family: var(--poppins);
+  margin-bottom: 5px;
+  color: var(--dark);
+  font-size: 15px;
+}
+
+.charsheet header section.misc {
+
+  border: 1px solid var(--blue);
+    border-radius: var(--radius);
+    padding-left: 10em;
+    padding-right: 10rem;
+}
+
+.charsheet header section.misc ul {
+  padding: 10px 0px 5px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.charsheet header section.misc ul li {
+  width: 33.33333%;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 10px;
+}
+
+.charsheet header section.misc ul li label {
+  font-family: var(--poppins);
+  margin-bottom: 5px;
+  color: var(--dark);
+  font-size: 15px;
+}
+
+.charsheet header section.misc ul li input {
+ 
+  padding: 0 16px;
+  height: 100%;
+  border: none;
+  
+  border-radius: 36px 36px 36px 36px;
+  outline: none;
+  width: 200px;
+  color: var(--dark);
+  padding: 0.4rem;
+  font-size: 18px;
+}
+.box{
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+form.charsheet header section.misc1 {
+ 
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+form.charsheet header section.misc1 ul {
+  padding: 10px 0px 5px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form.charsheet header section.misc1 ul li {
+  width: 33.33333%;
+  display: flex;
+  flex-direction: column-reverse;
+  
+}
+
+form.charsheet header section.misc1 ul li label {
+  margin-bottom: 5px;
+}
+
+form.charsheet header section.misc ul li input {
+  border: 0;
+  border-bottom: 1px solid var(--faded);
+}
+
+
+
+
+form.charsheet header section.misc2 {
+ 
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+form.charsheet header section.misc2 ul {
+  padding: 10px 0px 5px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form.charsheet header section.misc2 ul li {
+  width: 33.33333%;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+form.charsheet header section.misc2 ul li label {
+  margin-bottom: 5px;
+}
+
+form.charsheet header section.misc ul li input {
+  border: 0;
+  border-bottom: 1px solid var(--faded);
+}
+
+
+
+
+.charsheet header section.misc2 {
+
+  border: 1px solid var(--blue);
+  border-radius: var(--radius);
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.charsheet header section.misc2 ul {
+  padding: 10px 0px 5px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.charsheet header section.misc2 ul li {
+  width: 33.33333%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: space-between
+}
+
+.charsheet header section.misc2 ul li label {
+  font-family: var(--poppins);
+  margin-bottom: 5px;
+  color: var(--dark);
+  font-size: 15px;
+  padding-left: 15px;
+}
+
+.charsheet header section.misc2 ul li input {
+ 
+  padding: 0 16px;
+  height: 100%;
+  border: none;
+  
+  border-radius: 36px 36px 36px 36px;
+  outline: none;
+  width: 200px;
+  color: var(--dark);
+  padding: 0.4rem;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.saveButton {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 36px;
+  background: var(--blue);
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  font-weight: 500;
+  position: relative;
+  left: 85%;
+  top: 20px;
+  cursor: pointer;
+}
+.DeleteButton {
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 36px;
+  background: red;
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  font-weight: 500;
+  position: relative;
+  left: 94.5%;
+  bottom: 16px;
+  cursor: pointer;
+}
+
+h2{
+text-align: center;
+font-size: 18px;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #3c91e6;
+padding: 30px 0;
+}
+
+
+
+
+input:required:invalid {
+border-color: red;
+}
+
+.select{
+border-radius: 0;
+font-weight: 400;
+color: var(--dark);
+padding: 1px 40px;
+line-height: normal;
+transition: border-color 0.2s ease, outline 0.2s ease;
+height: 30px;
+background:var(--grey);
+}
+.code{
+  flex-grow: 1;
+    padding: 0 16px;
+    height: 100%;
+    border: none;
+    
+    border-radius: 36px 36px 36px 36px;
+    outline: none;
+    width: 160px;
+    color: var(--dark);
+    padding: 0.4rem;
+    font-size: 18px;
+}
+

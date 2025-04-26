@@ -1,0 +1,288 @@
+
+
+<div *ngIf="caracter != null">
+
+  <h2>Details of the Caracter "{{ caracter.idCaracters }}"</h2>
+  <div class="charsheet">
+    <header>
+      <section class="charname">
+        <label for="TypeProduct">codeCaracter </label>
+        <input [(ngModel)]="caracter.codeCaracter" />
+      </section>
+      <section class="misc1">
+        <section class="misc2">
+          <ul>
+            <li>
+              <label for="TypeProduct">description </label>
+              <input [(ngModel)]="caracter.descCaracter" />
+            </li>
+            <li>
+              <label for="ItemCode">unit of measure </label>
+              <input [(ngModel)]="caracter.unit_of_measure" />
+            </li>
+            <li>
+              <label for="ItemDesc">type </label>
+              <input [(ngModel)]="caracter.type" />
+            </li>
+            <li>
+              <label for="ParentItemCode">masqueSaisie </label>
+              <input [(ngModel)]="caracter.masqueSaisie" />
+            </li>
+
+            <li>
+              <label for="Image">regroupement_Libille </label>
+              <input [(ngModel)]="caracter.regroupement_Libille" />
+            </li>
+            <li>
+
+              <label for="ParentIDProduct">code_OPC </label>
+              <input [(ngModel)]="caracter.code_OPC" />
+
+            </li>
+
+            <li>
+
+              <label style="padding-left: 2rem;"
+                for="IDProcess">CodeProcess</label>
+              <select [(ngModel)]="caracter.codeProcess" id="IDProcess"
+                class="select">
+                <option *ngFor="let process of processes"
+                  [value]="process.codeProcess">
+                  {{ process.codeProcess }}
+                </option>
+              </select>
+
+            </li>
+            <li>
+
+              <label for="ITemGroup">localDescCaracter </label>
+              <input [(ngModel)]=" caracter.localDescCaracter" />
+            </li>
+
+            <li>
+              <label for="Warehouse">image_Caracters </label>
+              <input [(ngModel)]="caracter.image_Caracters">
+
+            </li>
+
+            <li>
+              <label
+                for="ConsumptionPerOneKM_outPut">lien_Cararactere_Nb_Repetition
+              </label>
+              <input [(ngModel)]=" caracter.lien_Cararactere_Nb_Repetition">
+
+            </li>
+            <li>
+
+              <label for="ITemGroup">ordre_Regroupement_Libille </label>
+              <input [(ngModel)]=" caracter.ordre_Regroupement_Libille" />
+            </li>
+
+            <li>
+              <label for="Warehouse">ordre_Caracter </label>
+              <input [(ngModel)]="caracter.ordre_Caracter">
+
+            </li>
+          </ul>
+        </section>
+
+        <section class="misc">
+          <ul>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="withMaxMinValue">withMaxMinValue </label>
+                </div>
+                <input type="checkbox" name="withMaxMinValue"
+                  [checked]='caracter.withMaxMinValue===true'
+                  [(ngModel)]="caracter.withMaxMinValue">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">visual_Value </label>
+                </div>
+                <input type="checkbox" name="FG"
+                  [checked]='caracter.visual_Value===true'
+                  [(ngModel)]="caracter.visual_Value">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">isUCS </label>
+                </div>
+                <input type="checkbox" name="FG"
+                  [checked]='caracter.isUCS===true'
+                  [(ngModel)]="caracter.isUCS">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">activated </label>
+                </div>
+                <input type="checkbox" name="FG"
+                  [checked]='caracter.activated===true'
+                  [(ngModel)]="caracter.activated">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">isSearchCreteria </label>
+                </div>
+                <input type="checkbox" name="FG"
+                  [checked]='caracter.isSearchCreteria===true'
+                  [(ngModel)]="caracter.isSearchCreteria">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">visible_InProductionView </label>
+                </div>
+                <input type="checkbox" name="visible_InProductionView"
+                  [checked]='caracter.visible_InProductionView===true'
+                  [(ngModel)]="caracter.visible_InProductionView">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">visibleInQualityView </label>
+                </div>
+                <input type="checkbox" name="visibleInQualityView"
+                  [checked]='caracter.visibleInQualityView===true'
+                  [(ngModel)]="caracter.visibleInQualityView">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">valeur </label>
+                </div>
+                <input type="checkbox" name="valeur"
+                  [checked]='caracter.valeur===true'
+                  [(ngModel)]="caracter.valeur">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">isDatasheet </label>
+                </div>
+                <input type="checkbox" name="isDatasheet"
+                  [checked]='caracter.isDatasheet===true'
+                  [(ngModel)]="caracter.isDatasheet">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">forInputboolean </label>
+                </div>
+                <input type="checkbox" name="forInputboolean"
+                  [checked]='caracter.forInputboolean===true'
+                  [(ngModel)]="caracter.forInputboolean">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">paramStartOfShiftboolean </label>
+                </div>
+                <input type="checkbox" name="paramStartOfShiftboolean"
+                  [checked]='caracter.paramStartOfShiftboolean===true'
+                  [(ngModel)]="caracter.paramStartOfShiftboolean">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">isToolingParameter </label>
+                </div>
+                <input type="checkbox" name="isToolingParameter"
+                  [checked]='caracter.isToolingParameter===true'
+                  [(ngModel)]="caracter.isToolingParameter">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">isSpeed </label>
+                </div>
+                <input type="checkbox" name="isSpeed"
+                  [checked]='caracter.isSpeed===true'
+                  [(ngModel)]="caracter.isSpeed">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">saisie_Automatique </label>
+                </div>
+                <input type="checkbox" name="saisie_Automatique"
+                  [checked]='caracter.saisie_Automatique===true'
+                  [(ngModel)]="caracter.saisie_Automatique">
+              </div>
+            </li>
+
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">isRepetitif </label>
+                </div>
+                <input type="checkbox" name="FG"
+                  [checked]='caracter.isRepetitif===true'
+                  [(ngModel)]="caracter.isRepetitif">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">isResistance </label>
+                </div>
+                <input type="checkbox" name="notConnected"
+                  [checked]='caracter.isResistance===true'
+                  [(ngModel)]="caracter.isResistance">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">print_Character_In_Separate_Label </label>
+                </div>
+                <input type="checkbox" name="print_Character_In_Separate_Label"
+                  [checked]='caracter.print_Character_In_Separate_Label===true'
+                  [(ngModel)]="caracter.print_Character_In_Separate_Label">
+              </div>
+            </li>
+            <li>
+              <div class="box">
+                <div style=" width: 750px;">
+                  <label for="FG">activer_Controle_Soumission </label>
+                </div>
+                <input type="checkbox" name="activer_Controle_Soumission"
+                  [checked]='caracter.activer_Controle_Soumission===true'
+                  [(ngModel)]="caracter.activer_Controle_Soumission">
+              </div>
+            </li>
+            <li>
+            </ul>
+          </section>
+
+        </section>
+      </header>
+    </div>
+
+    <button (click)="updateCaracter(caracter)" class="saveButton"
+      *ngIf="caracter?.idCaracters">Save</button>
+    <button (click)="deleteCaracter(caracter.codeCaracter!)"
+      onclick="return confirm('Are you sure?')" class="DeleteButton"
+      *ngIf="caracter?.idCaracters">Delete</button>
+    <button (click)="createCaracter(caracter)" class="saveButton"
+      *ngIf="!caracter?.idCaracters">Create</button>
+
+  </div>

@@ -1,0 +1,306 @@
+<div *ngIf="process != null">
+    <h2>Details of the Process "{{ process.idPorcess }}"</h2>
+ 
+<div class="charsheet">
+  <header>
+      <section class="charname">
+        <label for="codeProcess">codeProcess  </label> 
+        <input [(ngModel)]="process.codeProcess"  class="code"/>
+      </section>
+      <section class="misc1">
+      <section class="misc2">
+          <ul>
+              <li>           
+                <label for="descProcess">description  </label> 
+                <input [(ngModel)]="process.descProcess"  />
+              </li>
+              <li>
+                <label for="CodeProcessToRework">CodeProcessToRework  </label>
+                <input [(ngModel)]="process.codeProcessToRework"  />
+              </li>
+              <li>
+                <label for="returnValidationProfil">returnValidationProfil  </label> 
+                <input [(ngModel)]="process.returnValidationProfil"  />
+              </li>
+              <li>
+                <label for="StockName">StockName  </label>
+                <input [(ngModel)]="process.stockName"  />
+              </li>
+              <li>
+                <label for="PLC_Assigned">PLC_Assigned  </label>
+                <input [(ngModel)]="process.plC_Assigned"  />
+              </li>
+              <li>
+              
+                  <label for="Img_Process">Img_Process  </label>
+                  <input [(ngModel)]="process.img_Process"  />
+                
+              </li>
+              
+              <li>
+               
+                  <label for="Long_Machine_Stop_min">Long_Machine_Stop_min  </label>
+                  <input [(ngModel)]="process.long_Machine_Stop_min"  />
+               
+              </li>
+              <li>
+               
+                  <label for="Model_Label">Model_Label  </label>
+                  <input [(ngModel)]="process.model_Label"  />
+               
+              </li>
+
+
+              </ul>
+      </section>
+      <section class="misc">
+        <ul>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="Rework">Rework  </label>
+                  </div>             
+                  <input type="checkbox" name="rework_true" [checked]='process.rework===true'  [(ngModel)]="process.rework" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                  <label for="withToolingVerification">withToolingVerification  </label>
+                  </div>
+                  <input type="checkbox" name="withToolingVerification_true" [checked]='process.withToolingVerification===true'  [(ngModel)]="process.withToolingVerification" >
+                </div>
+              </li>
+
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="withSetupMandatory">withSetupMandatory  </label>
+                  </div>
+                <input type="checkbox" name="withSetupMandatory_true" [checked]='process.withSetupMandatory===true'  [(ngModel)]="process.withSetupMandatory" >
+              </div>
+            </li>
+         
+            
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="withIncomplete">withIncomplete  </label>
+                  </div>
+                <input type="checkbox" name="withIncomplete" [checked]='process.withIncomplete===true'  [(ngModel)]="process.withIncomplete" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="withQuality">withQuality  </label>
+                  </div>
+                <input type="checkbox" name="withQuality" [checked]='process.withQuality===true'  [(ngModel)]="process.withQuality" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="withValidationManualReport">withValidationManualReport  </label>
+                  </div>
+                <input type="checkbox" name="withValidationManualReport" [checked]='process.withValidationManualReport===true'  [(ngModel)]="process.withValidationManualReport" >
+              </div>
+            </li>
+        
+          
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="withQualityReturnValidation">withQualityReturnValidation  </label>
+                  </div>
+                <input type="checkbox" name="withQualityReturnValidation" [checked]='process.withQualityReturnValidation===true'  [(ngModel)]="process.withQualityReturnValidation" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="warehouseWithSupplierCode">warehouseWithSupplierCode  </label>
+                  </div>
+                <input type="checkbox" name="warehouseWithSupplierCode" [checked]='process.warehouseWithSupplierCode===true'  [(ngModel)]="process.warehouseWithSupplierCode" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="inputForCmes">inputForCmes  </label>
+                  </div>
+                <input type="checkbox" name="inputForCmes" [checked]='process.inputForCmes===true'  [(ngModel)]="process.inputForCmes" >
+              </div>
+            </li>
+            
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="warehouseCMES">warehouseCMES  </label>
+                  </div>
+                <input type="checkbox" name="warehouseCMES" [checked]='process.warehouseCMES===true'  [(ngModel)]="process.warehouseCMES" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="quality_100_100">quality_100_100  </label>
+                  </div>
+                <input type="checkbox" name="quality_100_100" [checked]='process.quality_100_100===true'  [(ngModel)]="process.quality_100_100" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="warehouseIncomplet">warehouseIncomplet  </label>
+                  </div>
+                <input type="checkbox" name="warehouseIncomplet" [checked]='process.warehouseIncomplet===true'  [(ngModel)]="process.warehouseIncomplet" >
+              </div>
+            </li>
+           
+          
+            <li>
+             
+              <div class="box">
+                <div style=" width: 750px;">
+                <label for="cnx_Par_Zone">cnx_Par_Zone  </label>
+                </div>
+                <input type="checkbox" name="cnx_Par_Zone" [checked]='process.cnx_Par_Zone===true'  [(ngModel)]="process.cnx_Par_Zone" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="with_Demarrage">with_Demarrage  </label>
+                  </div>
+                <input type="checkbox" name="with_Demarrage" [checked]='process.with_Demarrage===true'  [(ngModel)]="process.with_Demarrage" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="nB_Wire_Fois_Recette">nB_Wire_Fois_Recette  </label>
+                  </div>
+                <input type="checkbox" name="nB_Wire_Fois_Recette" [checked]='process.nB_Wire_Fois_Recette===true'  [(ngModel)]="process.nB_Wire_Fois_Recette" >
+              </div>
+            </li>
+       
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="stock_In_LPDM">stock_In_LPDM  </label>
+                  </div>
+                <input type="checkbox" name="stock_In_LPDM" [checked]='process.stock_In_LPDM===true'  [(ngModel)]="process.stock_In_LPDM" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="dechet_Activate">dechet_Activate  </label>
+                </div>
+                <input type="checkbox" name="dechet_Activate" [checked]='process.dechet_Activate===true'  [(ngModel)]="process.dechet_Activate" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="withoutFifo">withoutFifo  </label>
+                </div>
+                <input type="checkbox" name="withoutFifo" [checked]='process.withoutFifo===true'  [(ngModel)]="process.withoutFifo" >
+              </div>
+            </li>
+          
+          
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="ftQwithFirstValidationQuality">ftQwithFirstValidationQuality  </label>
+                  </div>
+                <input type="checkbox" name="ftQwithFirstValidationQuality" [checked]='process.ftQwithFirstValidationQuality===true'  [(ngModel)]="process.ftQwithFirstValidationQuality" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="hV_TEST">hV_TEST  </label>
+                  </div>
+                <input type="checkbox" name="hV_TEST" [checked]='process.hV_TEST===true'  [(ngModel)]="process.hV_TEST" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="withValidationRequestInsolation">withValidationRequestInsolation  </label>
+                  </div>
+                <input type="checkbox" name="withValidationRequestInsolation" [checked]='process.withValidationRequestInsolation===true'  [(ngModel)]="process.withValidationRequestInsolation" >
+              </div>
+            </li>
+           
+           
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="withValidationRequestColorant">withValidationRequestColorant  </label>
+                  </div>
+                <input type="checkbox" name="withValidationRequestColorant" [checked]='process.withValidationRequestColorant===true'  [(ngModel)]="process.withValidationRequestColorant" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="withScrapDeclaration">withScrapDeclaration  </label>
+                  </div>
+                <input type="checkbox" name="withScrapDeclaration" [checked]='process.withScrapDeclaration===true'  [(ngModel)]="process.withScrapDeclaration" >
+              </div>
+            </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="qaStopLabelRed">qaStopLabelRed  </label>
+                  </div>
+                <input type="checkbox" name="qaStopLabelRed" [checked]='process.qaStopLabelRed===true'  [(ngModel)]="process.qaStopLabelRed" >
+              </div>
+            </li>
+         
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="accept_OK_NOT_INC_Spools_As_input_Rewinders">accept_INC_Spools_As_input_Rewinders  </label>
+                  </div>
+                <input type="checkbox" name="accept_OK_NOT_INC_Spools_As_input_Rewinders" [checked]='process.accept_OK_NOT_INC_Spools_As_input_Rewinders===true'  [(ngModel)]="process.accept_OK_NOT_INC_Spools_As_input_Rewinders" >
+              </div>
+            </li>
+            
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="eventDetectionIncludeSpooler">eventDetectionIncludeSpooler  </label>
+                  </div>
+                <input type="checkbox" name="eventDetectionIncludeSpooler" [checked]='process.eventDetectionIncludeSpooler===true'  [(ngModel)]="process.withScrapDeclaration" >
+              </div>
+            </li>
+            <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                <label for="with_Metalic_Number_In_Prod">with_Metalic_Number_In_Prod  </label>
+                  </div>
+                <input type="checkbox" name="with_Metalic_Number_In_Prod" [checked]='process.with_Metalic_Number_In_Prod===true'  [(ngModel)]="process.with_Metalic_Number_In_Prod" >
+              </div>
+            </li>
+            
+          
+          </ul>
+      </section>
+    </section>
+  </header>
+ 
+</div>
+  
+
+    <button (click)="updateProcess(process)" class="saveButton"  *ngIf="process?.idPorcess">Save</button>
+    <button (click)="deleteProcess(process.codeProcess!)" onclick="return confirm('Are you sure?')" class="DeleteButton" *ngIf="process?.idPorcess">Delete</button>
+    <button (click)="createProcess(process)" class="saveButton" *ngIf="!process?.idPorcess">Create</button>
+    
+</div>
+
+  

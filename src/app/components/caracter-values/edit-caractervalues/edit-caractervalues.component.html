@@ -1,0 +1,49 @@
+<div *ngIf="value != null">
+
+    <h2>Details of the Caracter Value "{{ value.idCaracterValues }}"</h2>
+    <div class="charsheet">
+        <header>
+            <section class="charname">
+                <label style="padding-left: 2rem;" for="IDProcess">codeCaracter</label>
+                <select [(ngModel)]="value.codeCaracter" id="IDProcess" class="select">
+                    <option *ngFor="let caracter of caracters" [value]="caracter.codeCaracter">
+                        {{ caracter.codeCaracter }}
+                    </option>
+                </select>
+                
+            </section>
+            <section class="misc1">
+                <section class="misc2">
+                    <ul>
+                        <li>
+                            <label for="TypeProduct">value1Caracter </label>
+                            <input [(ngModel)]="value.value1Caracter" />
+                        </li>
+                        <li>
+                            <label for="TypeProduct">iTemGroup </label>
+                            <input [(ngModel)]="value.iTemGroup" />
+                        </li>
+                        <li>
+                            <label for="ItemCode">value2Caracter </label>
+                            <input [(ngModel)]="value.value2Caracter" />
+                        </li>
+                        <li>
+                            <label for="ItemDesc">operationArithmetique1 </label>
+                            <input [(ngModel)]="value.operationArithmetique1" />
+                        </li>
+                        <li>
+                            <label for="ParentItemCode">operationArithmetique2 </label>
+                            <input [(ngModel)]="value.operationArithmetique2" />
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </header>
+    </div>
+
+
+    <button (click)="updateCaracterValues(value)" class="saveButton" *ngIf="value?.idCaracterValues">Save</button>
+    <button (click)="deleteCaracterValues(value.idCaracterValues!)" onclick="return confirm('Are you sure?')" class="DeleteButton" *ngIf="value?.idCaracterValues">Delete</button>
+    <button (click)="createCaracterValues(value)" class="saveButton"*ngIf="!value?.idCaracterValues">Create</button>
+    
+</div>

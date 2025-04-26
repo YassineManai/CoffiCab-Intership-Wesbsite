@@ -1,0 +1,39 @@
+<div *ngIf="profileUser != null">
+    <h2>Details of the Process "{{ profileUser.idProfiUser }}"</h2>
+
+    <div class="charsheet">
+        <header>
+           
+         
+                <section class="misc2">
+                    <ul>
+
+                        <li>
+                            <label for="codeProcess">iD_Profil </label>
+                            <input [(ngModel)]="profileUser.id_Profil" class="code" />
+
+                        </li>
+                        <li>
+                            <label for="descProcess">NameProfile </label>
+                            <input [(ngModel)]="profileUser.nomProfil" />
+                        </li>
+                      
+                       
+
+                    </ul>
+                </section>
+             
+           
+        </header>
+
+    </div>
+
+    <button (click)="updateProfileUser(profileUser)" class="saveButton"
+        *ngIf="profileUser?.idProfiUser">Save</button>
+    <button (click)="deleteProfile(profileUser.id_Profil!)"
+        onclick="return confirm('Are you sure?')" class="DeleteButton"
+        *ngIf="profileUser?.idProfiUser">Delete</button>
+    <button (click)="createProfile(profileUser)" class="saveButton"
+        *ngIf="!profileUser?.idProfiUser">Create</button>
+
+</div>

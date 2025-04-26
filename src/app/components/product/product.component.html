@@ -1,0 +1,46 @@
+
+    
+   
+  <h2>Brief description or introduction about the Product being managed</h2>
+  <button (click)="initNewProduct()" class="button" >Create new Product</button>
+  
+   
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+          
+          <th>CodeProcess</th>
+            <th>TypeProduct</th>
+            <th>ItemCode</th>
+            <th>ItemDesc</th>
+            <th>CodeItemModel</th>
+            <th>Warehouse</th>
+            <th>ITemGroup</th>
+            <th>ConsumptionPerOneKM_outPut</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.codeProcess }}</td>
+            <td>{{ product.typeProduct }}</td>
+            <td>{{ product.itemCode }}</td>
+            <td>{{ product.itemDesc }}</td>
+            <td>{{ product.codeItemModel }}</td>
+            <td>{{ product.warehouse }}</td>
+            <td>{{ product.iTemGroup }}</td> 
+            <td>{{ product.consumptionPerOneKM_outPut }}</td>            
+            <td>
+              <img title="Details" class="img-responsive" src="./../../../assets/images/details.png" (click)="editProduct(product)" >
+            </td> 
+          </tr>
+        
+        </tbody>
+    </table>
+</div>
+<app-edit-product 
+  [product]="productToEdit" 
+  (productUpdated)="handleProcessUpdated()">
+</app-edit-product>
+    

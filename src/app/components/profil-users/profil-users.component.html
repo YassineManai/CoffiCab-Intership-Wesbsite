@@ -1,0 +1,31 @@
+<h2>Brief description or introduction about the processes being managed</h2>
+<button (click)="initNewProcfiluser()" class="button">Create new Process</button>
+
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>id_Profil</th>
+        <th>nameProfil</th>
+       
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let profileuser of profileusers">
+        <td>{{ profileuser.id_Profil }}</td>
+        <td>{{ profileuser.nomProfil }}</td>
+       
+        <td>
+          <img title="Details" class="img-responsive" src="./../../../assets/images/details.png" (click)="editProcfiluser(profileuser)" >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<app-edit-profile-user
+  [profileUser]="profilusertoEdit"
+  (profileUpdate)="handleProfilesUpdated()">
+</app-edit-profile-user>

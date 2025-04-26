@@ -1,0 +1,6 @@
+@ManufacturingExecutionSystem1_HostAddress = http://localhost:5071
+
+GET {{ManufacturingExecutionSystem1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

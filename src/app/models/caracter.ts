@@ -1,0 +1,34 @@
+export class Caracter {
+    idCaracters:number =  0;
+    codeCaracter: string = "";
+    descCaracter: string = "";
+    unit_of_measure: string = "";
+    withMaxMinValue: boolean  = false;
+    visual_Value: boolean  = false;
+    isUCS:boolean  = false;
+    activated:boolean  = false;
+    isSearchCreteria:boolean  = false;
+    visible_InProductionView:boolean  = false;
+    visibleInQualityView:boolean  = false;
+    valeur:boolean  = false;
+    type:string  = "";
+    isDatasheet:boolean  = false;
+    codeProcess: string = "";
+    forInputboolean  = false;
+    masqueSaisie: string = "";
+    regroupement_Libille: string = "";
+    ordre_Regroupement_Libille :number = 0;
+    ordre_Caracter:number = 0;
+    paramStartOfShiftboolean :boolean = false;
+    code_OPC: string = "";
+    localDescCaracter: string = "";
+    isToolingParameter :boolean  = false;
+    image_Caracters: string = "";
+    isSpeed : boolean  = false;
+    saisie_Automatique :boolean  = false;
+    isRepetitif :boolean  = false;
+    lien_Cararactere_Nb_Repetition: string = "";
+    isResistance :boolean  = false;
+    print_Character_In_Separate_Label:boolean  = false;
+    activer_Controle_Soumission :boolean  = false;
+}

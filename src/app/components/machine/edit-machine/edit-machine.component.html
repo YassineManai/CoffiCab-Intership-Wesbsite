@@ -1,0 +1,480 @@
+
+
+
+<div *ngIf="machine != null">
+  
+    <h2>Details of the Product "{{ machine.idPlant_Machine }}"</h2>
+  <div class="charsheet">
+  <header>
+    <section class="charname">
+        <label for="TypeProduct">machine_Code  </label> 
+        <input [(ngModel)]="machine.machine_Code"  />
+    </section>
+      <section class="misc1">
+      <section class="misc2">
+          <ul>
+              <li>           
+                <label for="TypeProduct">description  </label> 
+                <input [(ngModel)]="machine.description"  />
+              </li>
+              <li>
+                <label for="ItemCode">noK_Location  </label>
+                <input [(ngModel)]="machine.noK_Location"  />
+              </li>
+              <li>
+                <label for="ItemDesc">noK_Warehouse  </label> 
+                <input [(ngModel)]="machine.noK_Warehouse"  />
+              </li>
+              <li>
+                <label for="ParentItemCode">oK_Location  </label>
+                <input [(ngModel)]="machine.oK_Location"  />
+              </li>
+            
+              <li>
+                <label for="Image">oK_Warehouse  </label>
+                <input [(ngModel)]="machine.oK_Warehouse"  />
+              </li>
+              <li>
+              
+                <label for="ParentIDProduct">nameMachine  </label>
+                <input [(ngModel)]="machine.nameMachine"  />
+                
+              </li>
+              
+              <li>
+               
+                <label  style="padding-left: 2rem;"    for="IDProcess">CodeProcess</label>
+                <select [(ngModel)]="machine.codeProcess" id="IDProcess" class="select">
+                  <option *ngFor="let process of processes" [value]="process.codeProcess">
+                    {{ process.codeProcess }}
+                  </option>
+                </select>
+               
+              </li>
+              <li>
+               
+                <label for="ITemGroup">bulding  </label>
+                <input [(ngModel)]=" machine.bulding"  />
+              </li>
+  
+              <li>
+                <label for="Warehouse">code_Machine_OPC  </label>
+               <input [(ngModel)]="machine.code_Machine_OPC" >
+              
+              </li>
+              
+              <li>
+                <label for="ConsumptionPerOneKM_outPut">Serial_Number_Machine  </label>
+                <input [(ngModel)]=" machine.code_Machine_Serial_Number"  >
+              
+              </li>
+  
+              <li>
+                <label for="Famille">actualUser  </label>
+                <input [(ngModel)]="machine.actualUser"  >
+              
+              </li>
+  
+              <li>
+                <label for="Section">codeZone  </label>
+                <input  [(ngModel)]="machine.codeZone"  >
+          
+              </li>
+             
+        <li>
+          <label for="Couleur">type  </label>
+          <input [(ngModel)]="machine.type"  >
+        </li>
+  
+        <li>
+          <label for="TypeMatiere">aff_Input_Interface_Prod  </label>
+          <input [(ngModel)]="machine.aff_Input_Interface_Prod" >
+        </li>
+       
+        <li>
+          <label for="couleurS">actualUser_Qualite  </label>
+          <input  [(ngModel)]="machine.actualUser_Qualite"  >
+        </li>
+        <li>
+          <label for="Diametre">repertoireReport  </label>
+          <input [(ngModel)]="machine.repertoireReport"  >
+        </li>
+        <li>
+          <label for="CodePAC_DVR">repertoireReportArchive </label>
+          <input [(ngModel)]="machine.repertoireReportArchive"  >
+        </li>
+        <li>
+          <label for="CodePAC_DVR">repertoireReportRejete  </label>
+          <input [(ngModel)]="machine.repertoireReportRejete"  >
+        </li>
+        
+        <li>
+          <label for="m_min_m_sec">plan_Affichage_Int_Prod  </label>
+          <input [(ngModel)]=" machine.plan_Affichage_Interface_Prod"  >
+        </li>
+        <li>
+          <label for="CodeItemModel_DVR">startingTimeCalculeStop  </label>
+          <input [(ngModel)]="machine.startingTimeCalculeStop" >
+        </li>
+        <li>
+          <label for="Couleur">format_Date_Report  </label>
+          <input [(ngModel)]=" machine.format_Date_Report"  >
+        </li>
+        <li>
+          <label for="Couleur">readingReport  </label>
+          <input [(ngModel)]=" machine.readingReport"  >
+        </li>
+        <li>
+          <label for="Code_Recette_DVR">type_Fic </label>
+          <input  [(ngModel)]=" machine.type_Fic"  >
+        </li>
+        <li>
+          <label for="Code_Recette_DVR">grp_Objectif  </label>
+          <input  [(ngModel)]="machine.grp_Objectif"  >
+        </li>
+        <li>
+          <label  style="padding-left: 2rem;"    for="IDProcess">CodeProcess2</label>
+          <select [(ngModel)]="machine.code_Process2" id="IDProcess" class="select">
+            <option *ngFor="let process of processes" [value]="process.codeProcess">
+              {{ process.codeProcess }}
+            </option>
+          </select>
+        </li>
+        <li>
+          <label for="Code_Recette_DVR">unite  </label>
+          <input  [(ngModel)]=" machine.unite"  >
+        </li>
+  
+        <li>
+          <label for="InforItem">imprimanteCmes  </label>
+          <input [(ngModel)]=" machine.imprimanteCmes"  >
+        </li>
+        <li>
+          <label for="Warehouse_WIP">imprimantePanel  </label>
+          <input [(ngModel)]="machine.imprimantePanel"  >
+        </li>
+        <li>
+          <label for="ResistanceOptimal">time_waiting </label>
+          <input  [(ngModel)]="machine.time_waiting_before_validation_next_report" >
+        </li>
+        
+        <li>
+          <label for="Poids_Insolation_Kg_Km">workCenter  </label>
+            <input  [(ngModel)]="machine.workCenter" >
+        </li>
+        <li>
+          <label for="Poids_Insolation_Kg_Km">inc_Warehouse  </label>
+            <input  [(ngModel)]="  machine.inc_Warehouse" >
+        </li>
+        <li>
+          <label for="Poids_Insolation_Kg_Km">inc_Location  </label>
+            <input  [(ngModel)]=" machine.inc_Location" >
+        </li>
+        
+        <li>
+          <label for="Poids_Insolation_Kg_Km">setup_Warehouse  </label>
+            <input  [(ngModel)]="machine.setup_Warehouse" >
+        </li>
+        <li>
+          <label for="Couleur_Marquage">setup_Location  </label>
+          <input  [(ngModel)]=" machine.setup_Location"  >
+        </li>
+        <li>
+          <label for="Poids_Insolation_Kg_Km">inspection_Warehouse  </label>
+            <input  [(ngModel)]="machine.inspection_Warehouse" >
+        </li>
+        <li>
+            <label for="Poids_Insolation_Kg_Km">inspection_Location  </label>
+              <input  [(ngModel)]="machine.inspection_Location" >
+          </li>
+          <li>
+            <label for="Warehouse">type_Machine  </label>
+           <input [(ngModel)]="machine.type_Machine" >
+          
+          </li>
+          <li>
+            <label for="traitementPO">traitementPO  </label>
+           <input [(ngModel)]="machine.traitementPO" >
+          
+          </li>
+  
+              </ul>
+      </section>
+      <section class="misc">
+        <ul>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="With_Rewinder">onlyWithPO  </label>
+                  </div>             
+                  <input type="checkbox" name="With_Rewinder" [checked]='machine.onlyWithPO===true'  [(ngModel)]="machine.onlyWithPO" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">actualRecette_ValitadedSetup  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.actualRecette_ValitadedSetup===true'  [(ngModel)]="machine.actualRecette_ValitadedSetup" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Integration_ERP  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.with_Integration_ERP===true'  [(ngModel)]="machine.with_Integration_ERP" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Consumption  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.with_Consumption===true'  [(ngModel)]="machine.with_Consumption" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">dec_In_Quality  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.dec_In_Quality===true'  [(ngModel)]="machine.dec_In_Quality" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Contro_Input_BOM  </label>                
+                  </div>
+                  <input type="checkbox" name="with_Contro_Input_BOM" [checked]='machine.with_Contro_Input_BOM===true'  [(ngModel)]="machine.with_Contro_Input_BOM" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">rapport_Externe  </label>                
+                  </div>
+                  <input type="checkbox" name="rapport_Externe" [checked]='machine.rapport_Externe===true'  [(ngModel)]="machine.rapport_Externe" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">sN_Machine  </label>                
+                  </div>
+                  <input type="checkbox" name="sN_Machine" [checked]='machine.sN_Machine===true'  [(ngModel)]="machine.sN_Machine" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">verifiation_Complement_Par_Ligne  </label>                
+                  </div>
+                  <input type="checkbox" name="verifiation_Complement_Par_Ligne" [checked]='machine.verifiation_Complement_Par_Ligne===true'  [(ngModel)]="machine.verifiation_Complement_Par_Ligne" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Remplissage  </label>                
+                  </div>
+                  <input type="checkbox" name="with_Remplissage" [checked]='machine.with_Remplissage===true'  [(ngModel)]="machine.with_Remplissage" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">affectation_Direct_Ray  </label>                
+                  </div>
+                  <input type="checkbox" name="affectation_Direct_Ray" [checked]='machine.affectation_Direct_Ray===true'  [(ngModel)]="machine.affectation_Direct_Ray" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">verrouOF  </label>                
+                  </div>
+                  <input type="checkbox" name="verrouOF" [checked]='machine.verrouOF===true'  [(ngModel)]="machine.verrouOF" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">wip_After_Validation_QA  </label>                
+                  </div>
+                  <input type="checkbox" name="wip_After_Validation_QA" [checked]='machine.wip_After_Validation_QA===true'  [(ngModel)]="machine.wip_After_Validation_QA" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">without_Quality  </label>                
+                  </div>
+                  <input type="checkbox" name="without_Quality" [checked]='machine.without_Quality===true'  [(ngModel)]="machine.without_Quality" >
+                </div>
+              </li>
+            
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">print_Label_CB_QA  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.print_Label_CB_QA===true'  [(ngModel)]="machine.print_Label_CB_QA" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">notConnected  </label>                
+                  </div>
+                  <input type="checkbox" name="notConnected" [checked]='machine.notConnected===true'  [(ngModel)]="machine.notConnected" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Consumption_ERP  </label>                
+                  </div>
+                  <input type="checkbox" name="with_Consumption_ERP" [checked]='machine.with_Consumption_ERP===true'  [(ngModel)]="machine.with_Consumption_ERP" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Control_Insolation  </label>                
+                  </div>
+                  <input type="checkbox" name="with_Control_Insolation" [checked]='machine.with_Control_Insolation===true'  [(ngModel)]="machine.with_Control_Insolation" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Control_Colorant  </label>                
+                  </div>
+                  <input type="checkbox" name="with_Control_Colorant" [checked]='machine.with_Control_Colorant===true'  [(ngModel)]="machine.with_Control_Colorant" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Control_Tape  </label>                
+                  </div>
+                  <input type="checkbox" name="with_Control_Tape" [checked]='machine.with_Control_Tape===true'  [(ngModel)]="machine.with_Control_Tape" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Sequential_Consumption  </label>                
+                  </div>
+                  <input type="checkbox" name="with_Sequential_Consumption" [checked]='machine.with_Sequential_Consumption===true'  [(ngModel)]="machine.with_Sequential_Consumption" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">withScrapDeclaration  </label>                
+                  </div>
+                  <input type="checkbox" name="withScrapDeclaration" [checked]='machine.withScrapDeclaration===true'  [(ngModel)]="machine.withScrapDeclaration" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">scrapDeclarationMode_A_1_M_0  </label>                
+                  </div>
+                  <input type="checkbox" name="scrapDeclarationMode_A_1_M_0" [checked]='machine.scrapDeclarationMode_A_1_M_0===true'  [(ngModel)]="machine.scrapDeclarationMode_A_1_M_0" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_CB_In_Production_NOK  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.with_CB_In_Production_NOK===true'  [(ngModel)]="machine.with_CB_In_Production_NOK" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">FG  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.irR_Real_Time_From_XML_File===true'  [(ngModel)]="machine.irR_Real_Time_From_XML_File" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">disable_Machine_detected_Issues  </label>                
+                  </div>
+                  <input type="checkbox" name="disable_the_use_of_Machine_detected_Issues" [checked]='machine.disable_the_use_of_Machine_detected_Issues===true'  [(ngModel)]="machine.disable_the_use_of_Machine_detected_Issues" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_delete_report  </label>                
+                  </div>
+                  <input type="checkbox" name="with_delete_report" [checked]='machine.with_delete_report===true'  [(ngModel)]="machine.with_delete_report" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">tpV100_100  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.tpV100_100===true'  [(ngModel)]="machine.tpV100_100" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_Many_Input_For_Extrusion  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.with_Many_Input_For_Extrusion===true'  [(ngModel)]="machine.with_Many_Input_For_Extrusion" >
+                </div>
+              </li>
+              
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">modif_Recipe_OPC_MUL  </label>                
+                  </div>
+                  <input type="checkbox" name="modif_Recipe_OPC_MUL" [checked]='machine.modif_Recipe_OPC_MUL===true'  [(ngModel)]="machine.modif_Recipe_OPC_MUL" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">read_Report_With_Windows_Service  </label>                
+                  </div>
+                  <input type="checkbox" name="read_Report_With_Windows_Service" [checked]='machine.read_Report_With_Windows_Service===true'  [(ngModel)]="machine.read_Report_With_Windows_Service" >
+                </div>
+              </li>
+              <li>
+                <div class="box">
+                  <div style=" width: 750px;">
+                    <label for="FG">with_PO_First  </label>                
+                  </div>
+                  <input type="checkbox" name="FG" [checked]='machine.with_PO_First===true'  [(ngModel)]="machine.with_PO_First" >
+                </div>
+              </li>
+              
+              
+            
+  
+          </ul>
+      </section>
+    </section>
+  </header>
+  
+  </div>
+  
+  <button (click)="updateMachine(machine)" class="saveButton" *ngIf="machine?.idPlant_Machine">Save</button>
+  <button (click)="deleteMachine(machine.machine_Code!)" onclick="return confirm('Are you sure?')" class="DeleteButton" *ngIf="machine?.idPlant_Machine">Delete</button>
+  <button (click)="createMachine(machine)" class="saveButton"*ngIf="!machine?.idPlant_Machine">Create</button>
+  
+  </div>
+  
+ 
